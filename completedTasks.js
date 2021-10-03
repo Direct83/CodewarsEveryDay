@@ -56,3 +56,25 @@
 
 // console.log(alphabetWar("z"))
 // console.log(alphabetWar("zdqmwpbs"))
+
+// const palindromeChainLength = (number) => {
+// 	const reverse = +[...String(number)].reverse().join('');
+// 	return number - reverse && 1 + palindromeChainLength(reverse + number);
+// };
+
+// console.log(palindromeChainLength(87))
+// console.log(palindromeChainLength(89))
+// console.log(palindromeChainLength(10))
+
+// function findLongest(array){
+// 	const length = String(Math.max(...array)).length
+// 	return array.find(el => String(el).length === length)
+// }
+
+// console.log(findLongest([8, 900, 500]))
+
+// const partlist = array => array.map((_, index)=>
+// 	[array.slice(0, index).join(' '), array.slice(index).join(' ')]
+// ).slice(1)
+
+// console.log(partlist(["vJQ", "anj", "mQDq", "sOZ"])) //[["vJQ", "anj mQDq sOZ"], ["vJQ anj", "mQDq sOZ"], ["vJQ anj mQDq", "sOZ"]]
