@@ -78,3 +78,30 @@
 // ).slice(1)
 
 // console.log(partlist(["vJQ", "anj", "mQDq", "sOZ"])) //[["vJQ", "anj mQDq sOZ"], ["vJQ anj", "mQDq sOZ"], ["vJQ anj mQDq", "sOZ"]]
+
+// function rowWeights(array){
+// 	return array.reduce((acc, el, index) => {
+// 		index % 2 === 0 ? acc[0] = acc[0] + el : acc[1] = acc[1] + el
+// 		return acc
+// 	}, [0, 0])
+// }
+
+// console.log(rowWeights([50,60,70,80])) //[120,140]
+
+// const SequenceSum = (() => {
+// 	function SequenceSum() {}
+
+// 	SequenceSum.showSequence = (count) => {
+// 		if(count < 0) {
+// 			return `${count}<0`
+// 		}
+// 		const arrNumbers = [...Array(count + 1)].map((_, index) => index)
+// 		const numbersSum = arrNumbers.reduce((a, b) => a + b, 0)
+
+// 		return count === 0? '0=0' : `${arrNumbers.join('+')} = ${numbersSum}`
+// 	};
+
+// 	return SequenceSum;
+// })();
+
+// console.log(SequenceSum.showSequence(6)) //"0+1+2+3+4+5+6 = 21"
