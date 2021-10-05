@@ -105,3 +105,11 @@
 // })();
 
 // console.log(SequenceSum.showSequence(6)) //"0+1+2+3+4+5+6 = 21"
+
+// const predictAge = (...args) => Math.floor(Math.hypot(...args)/2)
+
+// console.log(predictAge(65, 60, 75, 55, 60, 63, 64, 45))
+
+// const wordsToMarks = (str) => [...str].reduce((acc,el) => acc += el.charCodeAt()-96, 0)
+
+// console.log(wordsToMarks('ab'))
