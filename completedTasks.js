@@ -126,3 +126,18 @@
 // }
 
 // console.log(sumTriangularNumbers(6))
+
+// const flattenAndSort = (array) => array
+// 	.reduce((acc, el) => [...acc, ...el],[])
+// 	.sort((a, b) => a - b);
+
+
+// console.log(flattenAndSort([[1, 3, 5], [100], [2, 4, 6]]))
+
+// const minSum = (arr) => arr.sort((a, b) => a - b)
+// 			.slice(0, arr.length/2)
+// 			.reduce((acc, el, index) => acc += el * arr[arr.length - index - 1], 0)
+
+
+// console.log(minSum([5,4,2,3])) // 22
+// console.log(minSum([12,6,10,26,3,24])) // 342
