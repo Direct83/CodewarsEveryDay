@@ -141,3 +141,9 @@
 
 // console.log(minSum([5,4,2,3])) // 22
 // console.log(minSum([12,6,10,26,3,24])) // 342
+
+// const factorial = (n) => n === 0 ? 1 : n * factorial(n - 1)
+
+// const halvingSum = (n) => n ? n + halvingSum(Math.floor(n/2)) : 0
+
+// console.log(halvingSum(25))
