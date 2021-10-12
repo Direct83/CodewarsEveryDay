@@ -157,3 +157,5 @@
 
 // console.log(menFromBoys([2,43,95,90,37]))
 // console.log(menFromBoys([2,15,17,15,2,10,10,17,1,1]))
+
+// const repeater = (string, n) => string.repeat(n)
