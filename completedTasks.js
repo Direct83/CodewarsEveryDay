@@ -159,3 +159,10 @@
 // console.log(menFromBoys([2,15,17,15,2,10,10,17,1,1]))
 
 // const repeater = (string, n) => string.repeat(n)
+
+// const solve = (arr) => arr.map(el =>
+// 	[...el.toLowerCase()].reduce((acc, el, i)=> Number(el.charCodeAt()-96 === i + 1) + acc
+// , 0))
+
+
+// console.log(solve(["abode","ABc","xyzD"]))  // [4, 3, 1]
