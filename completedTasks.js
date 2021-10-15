@@ -166,3 +166,7 @@
 
 
 // console.log(solve(["abode","ABc","xyzD"]))  // [4, 3, 1]
+
+// const maxNumber = (n) => Number([...String(n)].sort((a, b) => b - a).join(''))
+
+// console.log(maxNumber(123))  // 321

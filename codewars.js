@@ -1,6 +1,3 @@
-const solve = (arr) => arr.map(el =>
-	[...el.toLowerCase()].reduce((acc, el, i)=> Number(el.charCodeAt()-96 === i + 1) + acc
-, 0))
+const maxNumber = (n) => Number([...String(n)].sort((a, b) => b - a).join(''))
 
-
-console.log(solve(["abode","ABc","xyzD"]))  // [4, 3, 1]
+console.log(maxNumber(123))  // 321
