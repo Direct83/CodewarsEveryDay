@@ -1,4 +1,6 @@
-const solve = (arr) => arr.filter((el, i, m) => m.lastIndexOf(el) === i)
+function reverseNumber(n) {
+	const number = Number([...String(Math.abs(n))].reverse().join(''))
+	return n < 0 ? -number : number
+}
 
-
-console.log(solve([3,4,4,3,6,3])) //[4,6,3]
+console.log(reverseNumber(-123)) //-321
