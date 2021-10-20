@@ -193,3 +193,31 @@
 // }
 
 // console.log(reverseNumber(-123)) //-321
+
+// const orderedCount = text => [...new Set([...text])].map(el => [el, text.split(el).length - 1])
+
+
+// console.log(orderedCount("abracadabra")) // [['a', 5], ['b', 2], ['r', 2], ['c', 1], ['d', 1]]
+// console.log(orderedCount('233312')) // [ [ '2', 2 ], [ '3', 3 ], [ '1', 1 ] ]
+
+// const fizzbuzz = (n) => {
+// 	return [...Array(n)].map((el,i) => {
+// 		const index = i + 1;
+// 		if (index % 3 === 0 && index % 5 === 0) {
+// 			return 'FizzBuzz'
+// 		}
+
+// 		if (index % 3 === 0) {
+// 			return 'Fizz'
+// 		}
+
+// 		if (index % 5 === 0) {
+// 			return 'Buzz'
+// 		}
+
+// 		return index
+// 	})
+// }
+
+
+// console.log(fizzbuzz(10)) // [1,2,'Fizz',4,'Buzz','Fizz',7,8,'Fizz','Buzz']
