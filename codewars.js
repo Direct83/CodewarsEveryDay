@@ -1,21 +1,15 @@
-const fizzbuzz = (n) => {
-	return [...Array(n)].map((el,i) => {
-		const index = i + 1;
-		if (index % 3 === 0 && index % 5 === 0) {
-			return 'FizzBuzz'
-		}
+const list1 = [
+	{ firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'JavaScript' },
+	{ firstName: 'Maia', lastName: 'S.', country: 'Tahiti', continent: 'Oceania', age: 28, language: 'JavaScript' },
+	{ firstName: 'Shufen', lastName: 'L.', country: 'Taiwan', continent: 'Asia', age: 35, language: 'HTML' },
+	{ firstName: 'Sumayah', lastName: 'M.', country: 'Tajikistan', continent: 'Asia', age: 30, language: 'CSS' }
+];
 
-		if (index % 3 === 0) {
-			return 'Fizz'
-		}
+const list2 = [
+		{ firstName: 'Oliver', lastName: 'Q.', country: 'Australia', continent: 'Oceania', age: 19, language: 'HTML' },
+		{ firstName: 'Lukas', lastName: 'R.', country: 'Austria', continent: 'Europe', age: 89, language: 'HTML' }
+];
+const countDevelopers = list => list.filter(el => el.continent === 'Europe' && el.language === 'JavaScript').length
 
-		if (index % 5 === 0) {
-			return 'Buzz'
-		}
-
-		return index
-	})
-}
-
-
-console.log(fizzbuzz(10)) // [1,2,'Fizz',4,'Buzz','Fizz',7,8,'Fizz','Buzz']
+console.log(countDevelopers(list1)) // 1
+console.log(countDevelopers(list2)) // 0
