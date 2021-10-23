@@ -1,5 +1,5 @@
-const myLanguages = (results) => Object.keys(results).filter(r => results[r] > 59).sort((a, b) => results[b] - results[a])
+const findDigit = (num, nth) =>
+	nth > 0 ? +[...`${num}`].reverse()[--nth] || 0 : -1;
 
-console.log(myLanguages({"Java" : 10, "Ruby" : 80, "Python" : 65})) // ["Ruby", "Python"]
-console.log(myLanguages({"Hindi" : 60, "Greek" : 71, "Dutch" : 93})) // ["Dutch", "Greek", "Hindi"]
-
+console.log(findDigit(5673, 4)) // 5
+console.log(findDigit(-456, 4)) // 0
