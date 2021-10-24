@@ -249,3 +249,13 @@
 
 // console.log(findDigit(5673, 4)) // 5
 // console.log(findDigit(-456, 4)) // 0
+
+// const f = (n) => {
+// 	if(typeof n !== 'number' || !Number.isInteger(n) || n <= 0){
+// 		return false
+// 	}
+
+// 	return n*(n+1)/2
+// }
+
+// console.log(f(100)) // 5050

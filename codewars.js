@@ -1,5 +1,9 @@
-const findDigit = (num, nth) =>
-	nth > 0 ? +[...`${num}`].reverse()[--nth] || 0 : -1;
+const f = (n) => {
+	if(typeof n !== 'number' || !Number.isInteger(n) || n <= 0){
+		return false
+	}
 
-console.log(findDigit(5673, 4)) // 5
-console.log(findDigit(-456, 4)) // 0
+	return n*(n+1)/2
+}
+
+console.log(f(100)) // 5050
