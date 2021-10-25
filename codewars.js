@@ -1,9 +1,6 @@
-const f = (n) => {
-	if(typeof n !== 'number' || !Number.isInteger(n) || n <= 0){
-		return false
-	}
+const repeats = (arr) => arr.filter((el, _ , m) =>
+	m.filter(n => n === el).length === 1
+).reduce((a, b)=> a + b)
 
-	return n*(n+1)/2
-}
 
-console.log(f(100)) // 5050
+console.log(repeats([4,5,7,5,4,8])) // 15
