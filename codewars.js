@@ -1,6 +1,6 @@
-const repeats = (arr) => arr.filter((el, _ , m) =>
-	m.filter(n => n === el).length === 1
-).reduce((a, b)=> a + b)
+const containAllRots = (str, arr) => [...str].reduce((acc, _, i) => {
+	acc.push(str.slice(-i) + str.slice(0, -i))
+	return acc
+}, []).every(rot => arr.includes(rot))
 
-
-console.log(repeats([4,5,7,5,4,8])) // 15
+console.log(containAllRots("bsjq", ["bsjq", "qbsj", "jqbs", "sjqb", "twZNsslC", ]))
