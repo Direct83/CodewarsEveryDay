@@ -1,7 +1,4 @@
-function mygcd(x,y){
-	if (y > x) return mygcd(y, x);
-	if (!y) return x;
-	return mygcd(y, x % y);
-}
+const automorphic = (n) =>
+	RegExp(`${n}$`).test(n ** 2) ? 'Automorphic' : 'Not!!';
 
-console.log(mygcd(30,12)) // 6
+console.log(automorphic(76));
