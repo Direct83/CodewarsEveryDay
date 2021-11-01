@@ -2,7 +2,6 @@
 //    return el === el.toUpperCase()? ++acc : --acc
 // 	}, 0) < 0 ? str.toLowerCase() : str.toUpperCase()
 
-
 // console.log(solve("code"))
 // console.log(solve("CODe"))
 // console.log(solve("COde"))
@@ -131,13 +130,11 @@
 // 	.reduce((acc, el) => [...acc, ...el],[])
 // 	.sort((a, b) => a - b);
 
-
 // console.log(flattenAndSort([[1, 3, 5], [100], [2, 4, 6]]))
 
 // const minSum = (arr) => arr.sort((a, b) => a - b)
 // 			.slice(0, arr.length/2)
 // 			.reduce((acc, el, index) => acc += el * arr[arr.length - index - 1], 0)
-
 
 // console.log(minSum([5,4,2,3])) // 22
 // console.log(minSum([12,6,10,26,3,24])) // 342
@@ -164,7 +161,6 @@
 // 	[...el.toLowerCase()].reduce((acc, el, i)=> Number(el.charCodeAt()-96 === i + 1) + acc
 // , 0))
 
-
 // console.log(solve(["abode","ABc","xyzD"]))  // [4, 3, 1]
 
 // const maxNumber = (n) => Number([...String(n)].sort((a, b) => b - a).join(''))
@@ -184,7 +180,6 @@
 
 // const solve = (arr) => arr.filter((el, i, m) => m.lastIndexOf(el) === i)
 
-
 // console.log(solve([3,4,4,3,6,3])) //[4,6,3]
 
 // function reverseNumber(n) {
@@ -195,7 +190,6 @@
 // console.log(reverseNumber(-123)) //-321
 
 // const orderedCount = text => [...new Set([...text])].map(el => [el, text.split(el).length - 1])
-
 
 // console.log(orderedCount("abracadabra")) // [['a', 5], ['b', 2], ['r', 2], ['c', 1], ['d', 1]]
 // console.log(orderedCount('233312')) // [ [ '2', 2 ], [ '3', 3 ], [ '1', 1 ] ]
@@ -218,7 +212,6 @@
 // 		return index
 // 	})
 // }
-
 
 // console.log(fizzbuzz(10)) // [1,2,'Fizz',4,'Buzz','Fizz',7,8,'Fizz','Buzz']
 
@@ -243,7 +236,6 @@
 // console.log(myLanguages({"Java" : 10, "Ruby" : 80, "Python" : 65})) // ["Ruby", "Python"]
 // console.log(myLanguages({"Hindi" : 60, "Greek" : 71, "Dutch" : 93})) // ["Dutch", "Greek", "Hindi"]
 
-
 // const findDigit = (num, nth) =>
 // 	nth > 0 ? +[...`${num}`].reverse()[--nth] || 0 : -1;
 
@@ -263,7 +255,6 @@
 // const repeats = (arr) => arr.filter((el, _ , m) =>
 // 	m.filter(n => n === el).length === 1
 // ).reduce((a, b)=> a + b)
-
 
 // console.log(repeats([4,5,7,5,4,8])) // 15
 
@@ -315,3 +306,8 @@
 // 	RegExp(`${n}$`).test(n ** 2) ? 'Automorphic' : 'Not!!';
 
 // console.log(automorphic(76));
+
+// const multiplyAll = (arr) => (n) => arr.map((x) => n * x);
+
+// console.log(multiplyAll([1, 2, 3])(1)); // [1, 2, 3]
+// console.log(multiplyAll([1, 2, 3])(2)); // [2, 4, 6]
