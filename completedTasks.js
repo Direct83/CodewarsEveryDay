@@ -325,3 +325,8 @@
 
 // console.log(cubeOdd([1, 2, 3, 4])); // 28
 // console.log(cubeOdd([-3, -2, 2, 3]));
+
+// const generateShape = (integer) =>
+// 	[...Array(integer)].map((_) => '+'.repeat(integer)).join('\n');
+
+// console.log(generateShape(8)); // '++++++++\n++++++++\n++++++++\n++++++++\n++++++++\n++++++++\n++++++++\n++++++++'
