@@ -330,3 +330,21 @@
 // 	[...Array(integer)].map((_) => '+'.repeat(integer)).join('\n');
 
 // console.log(generateShape(8)); // '++++++++\n++++++++\n++++++++\n++++++++\n++++++++\n++++++++\n++++++++\n++++++++'
+
+// function validatePIN(pin) {
+// 	if (pin.length === 4 || pin.length === 6) {
+// 		return pin.split('').every((symbol) => !isNaN(symbol));
+// 	}
+// 	return false;
+// }
+
+// console.log(validatePIN('123 '));
+// console.log(validatePIN('1234'));
+// console.log(validatePIN('1234a'));
+// console.log(validatePIN('123456'));
+// console.log(validatePIN('000000'));
+
+// const solve = (arr) => arr.find((el) => !arr.includes(-el));
+
+// console.log(solve([1, -1, 2, -2, 3])); // 3
+// console.log(solve([-3, 1, 2, 3, -1, -4, -2])); // -4
