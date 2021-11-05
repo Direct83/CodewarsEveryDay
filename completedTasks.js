@@ -348,3 +348,17 @@
 
 // console.log(solve([1, -1, 2, -2, 3])); // 3
 // console.log(solve([-3, 1, 2, 3, -1, -4, -2])); // -4
+
+// const solution = (str, ending) => str.slice(str.length - ending.length) === ending;
+
+// console.log(solution('abc', ''));
+
+// const strong = (n) =>
+// 	[...String(n)].reduce((acc, el) => {
+// 		acc = acc + [...Array(Number(el))].reduce((acc, _, i) => acc * (i + 1), 1);
+// 		return acc;
+// 	}, 0) === n
+// 		? 'STRONG!!!!'
+// 		: 'Not Strong !!';
+
+// console.log(strong(145)); // 'STRONG!!!!'
