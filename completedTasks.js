@@ -384,3 +384,11 @@
 // console.log(add(11, 99)); // 1010
 // console.log(add(122, 81)); // 1103
 // console.log(add(38810, 1383)); // 391193
+
+// const count = (array) =>
+// 	array.reduce((acc, el) => {
+// 		acc[el] = ++acc[el] || 1;
+// 		return acc;
+// 	}, {});
+
+// console.log(count(['a', 'a', 'b', 'b', 'b'])); // { 'a': 2, 'b': 3 }

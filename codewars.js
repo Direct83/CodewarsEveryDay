@@ -1,13 +1,7 @@
-function add(a, b) {
-	let str = '';
-	while (a || b) {
-		str = (a % 10) + (b % 10) + str;
-		a = Math.floor(a / 10);
-		b = Math.floor(b / 10);
-	}
-	return +str;
-}
+const count = (array) =>
+	array.reduce((acc, el) => {
+		acc[el] = ++acc[el] || 1;
+		return acc;
+	}, {});
 
-console.log(add(11, 99)); // 1010
-console.log(add(122, 81)); // 1103
-console.log(add(38810, 1383)); // 391193
+console.log(count(['a', 'a', 'b', 'b', 'b'])); // { 'a': 2, 'b': 3 }
