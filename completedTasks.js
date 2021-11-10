@@ -400,3 +400,7 @@
 // 		.reduce((a, b) => a + b, 0);
 
 // console.log(largestPairSum([10,14,2,23,19])); // 42
+
+// const switcheroo = (x) => x.replace(/[ab]/g, (x) => (x === 'a' ? 'b' : 'a'));
+
+// console.log(switcheroo('acb')); // bca

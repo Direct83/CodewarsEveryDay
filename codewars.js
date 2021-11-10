@@ -1,7 +1,3 @@
-const largestPairSum = (number) =>
-	number
-		.sort((a, b) => b - a)
-		.slice(0, 2)
-		.reduce((a, b) => a + b, 0);
+const switcheroo = (x) => x.replace(/[ab]/g, (x) => (x === 'a' ? 'b' : 'a'));
 
-console.log(largestPairSum([10, 14, 2, 23, 19])); // 42
+console.log(switcheroo('acb')); // bca
