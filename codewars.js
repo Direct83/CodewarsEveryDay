@@ -1,3 +1,7 @@
-const switcheroo = (x) => x.replace(/[ab]/g, (x) => (x === 'a' ? 'b' : 'a'));
+const maxProduct = (numbers, size) =>
+	numbers
+		.sort((a, b) => b - a)
+		.slice(0, size)
+		.reduce((acc, el) => acc * el, 1);
 
-console.log(switcheroo('acb')); // bca
+console.log(maxProduct([4, 3, 5], 2)); // 20
