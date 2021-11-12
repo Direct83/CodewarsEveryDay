@@ -412,3 +412,7 @@
 // 		.reduce((acc, el) => acc * el, 1);
 
 // console.log(maxProduct([4,3,5], 2)); // 20
+
+// const greet = (name) => `Hello ${name[0].toUpperCase() + name.slice(1)}!`;
+
+// console.log(greet('riley')) // 'Hello Riley!'
