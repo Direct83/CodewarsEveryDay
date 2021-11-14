@@ -1,18 +1,15 @@
-const streetFighterSelection = (fighters, [i, j], moves) => {
-	return moves.map((move) => {
-		if (move === 'up') i = Math.max(i - 1, 0);
-		if (move === 'down') i = Math.min(i + 1, 1);
-		if (move === 'left') j = (j - 1 + 6) % 6;
-		if (move === 'right') j = (j + 1 + 6) % 6;
+function findMin(arr) {
+	const set = new Set(arr);
+	let num = 1;
 
-		return fighters[i][j];
-	});
-};
+	while (set.has(num)) {
+		num++;
+	}
 
-const fighters = [
-	['Ryu', 'E.Honda', 'Blanka', 'Guile', 'Balrog', 'Vega'],
-	['Ken', 'Chun Li', 'Zangief', 'Dhalsim', 'Sagat', 'M.Bison'],
-];
+	return num;
+}
 
-const moves = ['up', 'left', 'right', 'left', 'left'];
-console.log(streetFighterSelection(fighters, [0, 0], moves));
+console.log(findMin([-5, -2, -3])); // 1
+console.log(findMin([1, 2, 3])); // 4
+console.log(findMin([-1, -2, 7])); // 1
+console.log(findMin([1, 2, 1, 4])); // 3
