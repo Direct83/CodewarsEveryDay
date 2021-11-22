@@ -498,3 +498,8 @@
 // }
 
 // console.log(prime(23)); // [2, 3, 5, 7, 11, 13, 17, 19, 23];
+
+// const inviteMoreWomen = (L) => L.reduce((acc, el) => acc + el, 0) > 0;
+
+// console.log(inviteMoreWomen([1, -1, 1])); // true
+// console.log(inviteMoreWomen([1, -1])); // false
