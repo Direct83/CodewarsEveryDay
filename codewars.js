@@ -1,4 +1,4 @@
-const inviteMoreWomen = (L) => L.reduce((acc, el) => acc + el, 0) > 0;
+const countRedBeads = (n) => (n ? (n - 1) * 2 : n);
 
-console.log(inviteMoreWomen([1, -1, 1])); // true
-console.log(inviteMoreWomen([1, -1])); // false
+console.log(countRedBeads(0)); // 0
+console.log(countRedBeads(5)); // 8
