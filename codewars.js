@@ -1,5 +1,13 @@
-const findDeletedNumber = (arr, mixArr) =>
-	arr.find((el) => !mixArr.includes(el)) || 0;
+class Dinglemouse {
+	constructor(firstName, lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 
-console.log(findDeletedNumber([1, 2, 3, 4, 5], [3, 4, 1, 5])); // 2
-console.log(findDeletedNumber([1, 2, 3, 4, 5], [1, 2, 3, 4, 5])); // 0
+	getFullName() {
+		return `${this.firstName} ${this.lastName}`.trim();
+	}
+}
+
+console.log(new Dinglemouse('Clint', 'Eastwood').getFullName()); // Clint Eastwood
+console.log(new Dinglemouse('', 'Eastwood').getFullName()); // Eastwood
