@@ -528,3 +528,13 @@
 
 // console.log(new Dinglemouse('Clint', 'Eastwood').getFullName()); // Clint Eastwood
 // console.log(new Dinglemouse('', 'Eastwood').getFullName()); // Eastwood
+
+// const alternateCase = (string) =>
+// 	[...string].reduce((acc, el) => {
+// 		const alternateCase =
+// 			el.toUpperCase() === el ? el.toLowerCase() : el.toUpperCase();
+// 		return acc + alternateCase;
+// 	}, '');
+
+// console.log(alternateCase('abc'));
+// console.log(alternateCase('ABC'));

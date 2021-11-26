@@ -1,13 +1,9 @@
-class Dinglemouse {
-	constructor(firstName, lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
+const alternateCase = (string) =>
+	[...string].reduce((acc, el) => {
+		const alternateCase =
+			el.toUpperCase() === el ? el.toLowerCase() : el.toUpperCase();
+		return acc + alternateCase;
+	}, '');
 
-	getFullName() {
-		return `${this.firstName} ${this.lastName}`.trim();
-	}
-}
-
-console.log(new Dinglemouse('Clint', 'Eastwood').getFullName()); // Clint Eastwood
-console.log(new Dinglemouse('', 'Eastwood').getFullName()); // Eastwood
+console.log(alternateCase('abc'));
+console.log(alternateCase('ABC'));
