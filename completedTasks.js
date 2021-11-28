@@ -558,3 +558,11 @@
 // console.log(calculate(3.2, '+', 8));
 // console.log(calculate(-3, '/', 0));
 // console.log(calculate(-3, 'm', 0));
+
+// const toUnderscore = (string) =>
+// 	String(string)
+// 		.replace(/(.)([A-Z])/g, '$1_$2')
+// 		.toLowerCase();
+
+// console.log(toUnderscore('TestController')); // test_controller
+// console.log(toUnderscore('App7Test')); // app7_test
