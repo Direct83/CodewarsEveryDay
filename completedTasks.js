@@ -566,3 +566,8 @@
 
 // console.log(toUnderscore('TestController')); // test_controller
 // console.log(toUnderscore('App7Test')); // app7_test
+
+// const hasUniqueChars = (str) => new Set(str).size === str.length;
+
+// console.log(hasUniqueChars('  nAa')); // false
+// console.log(hasUniqueChars("abcdef")) // true
