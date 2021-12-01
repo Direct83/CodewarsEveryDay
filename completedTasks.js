@@ -577,3 +577,21 @@
 
 // console.log(maxDiff([0, 1, 2, 3, 4, 5, 6])); // 6
 // console.log(maxDiff([-0, 1, 2, -3, 4, 5, -6])) // 11
+
+// const removeRotten = (bagOfFruits) =>
+// 	!bagOfFruits
+// 		? []
+// 		: bagOfFruits.reduce((acc, el) => {
+// 				const word = el.replace(/(rotten)/g, '').toLowerCase();
+// 				return acc.concat(word);
+// 		  }, []);
+
+// console.log(
+// 	removeRotten([
+// 		'rottenApple',
+// 		'rottenBanana',
+// 		'rottenApple',
+// 		'rottenPineapple',
+// 		'rottenKiwi',
+// 	])
+// );
