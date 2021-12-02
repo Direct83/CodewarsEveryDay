@@ -1,17 +1,3 @@
-const removeRotten = (bagOfFruits) =>
-	!bagOfFruits
-		? []
-		: bagOfFruits.reduce((acc, el) => {
-				const word = el.replace(/(rotten)/g, '').toLowerCase();
-				return acc.concat(word);
-		  }, []);
+const sevenAte9 = (str) => str.replace(/79(?=7)/g, '7');
 
-console.log(
-	removeRotten([
-		'rottenApple',
-		'rottenBanana',
-		'rottenApple',
-		'rottenPineapple',
-		'rottenKiwi',
-	])
-);
+console.log(sevenAte9('7979797')); // 7777
