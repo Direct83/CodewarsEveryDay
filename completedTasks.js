@@ -599,3 +599,7 @@
 // const sevenAte9 = (str) => str.replace(/79(?=7)/g, '7')
 
 // console.log(sevenAte9('7979797')) // 7777
+
+// const solve = (s) => Math.max(...s.match(/\d+/g));
+
+// console.log(solve('gh12cdy695m1')); // 695
