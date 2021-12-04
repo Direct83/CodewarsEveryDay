@@ -1,3 +1,3 @@
-const solve = (s) => Math.max(...s.match(/\d+/g));
+const multiples = (m, n) => [...Array(m)].map((_, index) => (index + 1) * n);
 
-console.log(solve('gh12cdy695m1')); // 695
+console.log(multiples(3, 5));

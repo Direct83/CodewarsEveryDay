@@ -603,3 +603,7 @@
 // const solve = (s) => Math.max(...s.match(/\d+/g));
 
 // console.log(solve('gh12cdy695m1')); // 695
+
+// const multiples = (m, n) => [...Array(m)].map((_, index) => (index + 1) * n);
+
+// console.log(multiples(3, 5));
