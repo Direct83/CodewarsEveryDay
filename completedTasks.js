@@ -615,3 +615,7 @@
 // 	}, s);
 
 // console.log(capitalize('abcdef', [1, 2, 5, 100])); // 'aBCdeF'
+
+// const hasSubpattern = (string) => /^(.*)\1+$/.test(string);
+
+// console.log(hasSubpattern('abbaabbaabba')); // true
