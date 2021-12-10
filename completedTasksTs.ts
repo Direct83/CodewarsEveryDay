@@ -52,3 +52,15 @@
 
 // console.log(dashatize(274)); // "2-7-4"
 // console.log(dashatize(86320)); // "86-3-20"
+
+// function addUsername(list) {
+// 	return list.map((el) => {
+// 		return {
+// 			...el,
+// 			username:
+// 				el.firstName.toLowerCase() +
+// 				el.lastName.slice(0, 1).toLowerCase() +
+// 				(Date.prototype.getFullYear() - el.age).toString(),
+// 		};
+// 	});
+// }
