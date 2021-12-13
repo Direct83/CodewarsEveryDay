@@ -1,9 +1,3 @@
-const arrayLeaders = (numbers) =>
-	numbers.filter((number, index) => {
-		const rightNumbers = numbers
-			.slice(index + 1)
-			.reduce((total, number) => total + number, 0);
-		return number > rightNumbers;
-	});
+const nthSmallest = (arr, pos) => arr.sort((a, b) => a - b)[pos - 1];
 
-console.log(arrayLeaders([16, 17, 4, 3, 5, 2])); // [17,5,2]
+console.log(nthSmallest([3, 1, 2], 2)); // 2

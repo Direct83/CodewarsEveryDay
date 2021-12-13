@@ -710,3 +710,7 @@
 // 	});
 
 // console.log(arrayLeaders([16, 17, 4, 3, 5, 2])); // [17,5,2]
+
+// const nthSmallest = (arr, pos) => arr.sort((a, b) => a - b)[pos - 1];
+
+// console.log(nthSmallest([3,1,2],2)) // 2
