@@ -798,3 +798,8 @@
 // const factorial = (n) => {
 // 	return n <= 1 ? 1 : n * factorial(n - 1);
 // };
+
+// const solve = (s) =>
+// 	s.split(/[^aeiou]/).reduce((s, n) => Math.max(s, n.length), 0);
+
+// console.log(solve('iiihoovaeaaaoougjyaw')); // 8
