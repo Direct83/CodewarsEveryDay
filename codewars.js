@@ -1,7 +1,19 @@
-const pairs = (ar) =>
-	[...Array(Math.ceil(ar.length / 2))].reduce((acc) => {
-		const numbers = ar.splice(0, 2);
-		const consecutiveNumbers = numbers[0] > numbers[1] ? numbers[0] - numbers[1] : numbers[1] - numbers[0];
-		acc += consecutiveNumbers === 1 ? 1 : 0;
-		return acc;
-	}, 0);
+function toLeetSpeak(str) {
+	const translation = {
+		A: '@',
+		B: '8',
+		C: '(',
+		E: '3',
+		G: '6',
+		H: '#',
+		I: '!',
+		L: '1',
+		O: '0',
+		S: '$',
+		T: '7',
+		Z: '2',
+	};
+
+	return [...str].reduce((acc, el) => acc + (translation[el] || el), '');
+}
+console.log(toLeetSpeak('LEET')); // "1337"
