@@ -886,3 +886,5 @@
 // 	return [...str].reduce((acc, el) => acc + (translation[el] || el), '');
 // }
 // console.log(toLeetSpeak('LEET')); // "1337"
+
+// const toNumberArray = (stringarray) => stringarray.map(Number);
