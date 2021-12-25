@@ -1,1 +1,3 @@
-const toNumberArray = (stringarray) => stringarray.map(Number);
+const FilterString = (value) => Number(value.replace(/\D/g, ''));
+
+console.log(FilterString('aa1bb2cc3dd'));

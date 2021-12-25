@@ -3,7 +3,6 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "codewars.js",
-	"type": "module",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -20,6 +19,8 @@
 	"homepage": "https://github.com/Direct83/CodewarsEveryDay#readme",
 	"dependencies": {
 		"@types/node": "^17.0.0",
-		"node-fetch": "^2.6.1"
+		"node-fetch": "^2.6.1",
+		"ts-node": "^10.4.0",
+		"typescript": "^4.5.4"
 	}
 }
