@@ -1,4 +1,7 @@
-const divCon = (x) =>
-	x.reduce((acc, number) => (typeof number === 'string' ? acc - Number(number) : acc + Number(number)), 0);
+function solve(a, b) {
+	const first = a.replace(new RegExp(`[${b}]`, 'g'), '');
+	const second = b.replace(new RegExp(`[${a}]`, 'g'), '');
+	return first + second;
+}
 
-console.log(divCon(['5', '0', 9, 3, 2, 1, '9', 6, 7])); // 14
+console.log(solve('xxx', 'xzca')); // zca

@@ -892,3 +892,11 @@
 // const FilterString = (value) => Number(value.replace(/\D/g, ''));
 
 // console.log(FilterString('aa1bb2cc3dd'));
+
+// function solve(a, b) {
+// 	const first = a.replace(new RegExp(`[${b}]`, 'g'), '');
+// 	const second = b.replace(new RegExp(`[${a}]`, 'g'), '');
+// 	return first + second;
+// }
+
+// console.log(solve('xxx', 'xzca')); // zca
