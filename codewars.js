@@ -1,7 +1,4 @@
-function solve(a, b) {
-	const first = a.replace(new RegExp(`[${b}]`, 'g'), '');
-	const second = b.replace(new RegExp(`[${a}]`, 'g'), '');
-	return first + second;
-}
+const longestWord = (stringOfWords) =>
+	stringOfWords.split(' ').reduce((acc, word) => (word.length >= acc.length ? word : acc), '');
 
-console.log(solve('xxx', 'xzca')); // zca
+console.log(longestWord('red blue grey'));

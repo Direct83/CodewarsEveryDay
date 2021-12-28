@@ -3,6 +3,6 @@ interface ITest {
 	name?: string;
 }
 
-const test: Required<ITest> = {
-	zain: 'b',
-};
+// const test: Required<ITest> = {
+// 	zain: 'b',
+// };
