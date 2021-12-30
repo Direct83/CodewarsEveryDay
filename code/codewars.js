@@ -1,3 +1,1 @@
-const spam = (number) => 'hue'.repeat(number);
-
-console.log(spam(14));
+const greet = (name) => (name ? `hello ${name}!` : null);
