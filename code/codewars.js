@@ -1,7 +1,3 @@
-const min = (arr, toReturn) => {
-	const minValue = Math.min(...arr);
-	return toReturn === 'value' ? minValue : arr.indexOf(minValue);
-};
+const vaporcode = (string) => [...string.replace(/\s/g, '').toUpperCase()].join('  ');
 
-console.log(min([1, 2, 3, 4, 5], 'value'));
-console.log(min([1, 2, 3, 4, 5], 'index'));
+console.log(vaporcode('Lets go to the movies'));

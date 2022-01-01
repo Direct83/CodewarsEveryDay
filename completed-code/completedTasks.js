@@ -919,3 +919,7 @@
 
 // console.log(min([1, 2, 3, 4, 5], 'value'));
 // console.log(min([1, 2, 3, 4, 5], 'index'));
+
+// const vaporcode = (string) => [...string.replace(/\s/g, '').toUpperCase()].join('  ');
+
+// console.log(vaporcode('Lets go to the movies'));
