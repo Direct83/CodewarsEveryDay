@@ -1,22 +1,51 @@
-const deleteNth1 = (arr, maxRepeats) =>
-	arr.length
-		? arr.reduce(
-				(acc, number, index) => {
-					acc.found[number] = ++acc.found[number] || 1;
-					if (acc.found[number] <= maxRepeats) {
-						acc.arr.push(number);
-					}
-					return index === arr.length - 1 ? acc.arr : acc;
-				},
-				{ found: {}, arr: [] }
-		  )
-		: arr;
+const words = {
+	zero: 0,
+	one: 1,
+	two: 2,
+	three: 3,
+	four: 4,
+	five: 5,
+	six: 6,
+	seven: 7,
+	eight: 8,
+	nine: 9,
+	ten: 10,
+	eleven: 11,
+	twelve: 12,
+	thirteen: 13,
+	fourteen: 14,
+	fifteen: 15,
+	sixteen: 16,
+	seventeen: 17,
+	eighteen: 18,
+	nineteen: 19,
+	twenty: 20,
+	thirty: 30,
+	forty: 40,
+	fifty: 50,
+	sixty: 60,
+	seventy: 70,
+	eighty: 80,
+	ninety: 90,
+};
+const bigValueWords = { hundred: 100, thousand: 1000, million: 1000000 };
+const parseInt = (str) =>
+	str.split(/ |-/).reduce((acc, word) => {
+		if (words[word]) {
+			acc += words[word];
+		}
+		if (bigValueWords[word]) {
+			acc += bigValueWords[word] * (acc % bigValueWords[word]) - (acc % bigValueWords[word]);
+		}
+		return acc;
+	}, 0);
 
-const deleteNth2 = (arr, maxRepeats, cache = {}) =>
-	arr.filter((number) => {
-		cache[number] = (cache[number] || 0) + 1;
-		return cache[number] <= maxRepeats;
-	});
+console.log(parseInt('seven hundred eighty-three thousand nine hundred and nineteen'));
 
-const nums = [1, 1, 1, 1, 2, 2, 2, 2];
-console.log(deleteNth1(nums, 2));
+function toTime(seconds) {
+	const hour = Math.floor(seconds / 3600);
+	const minute = Math.floor((seconds % 3600) / 60);
+	return `${hour} hour(s) and ${minute} minute(s)`;
+}
+
+console.log(toTime(3601));
