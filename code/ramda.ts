@@ -1,4 +1,19 @@
-import { pipe, ascend, last, split, sort, length, filter, whereEq, always, equals, cond, T } from 'ramda';
+import {
+	pipe,
+	ascend,
+	last,
+	split,
+	sort,
+	length,
+	filter,
+	whereEq,
+	always,
+	equals,
+	cond,
+	T,
+	subtract,
+	add,
+} from 'ramda';
 
 // const longestWord = pipe(split` `, sort(ascend(length)), last);
 
@@ -10,10 +25,14 @@ import { pipe, ascend, last, split, sort, length, filter, whereEq, always, equal
 
 // console.log(incomplete(arr));
 
-const fn = cond([
-	[() => undefined, always('water freezes at 0°C')],
-	[() => undefined, always('water boils at 100°C')],
-	[T, (temp) => 'nothing special happens at ' + temp + '°C'],
-])(5);
+// const fn = cond([
+// 	[equals(0), always('water freezes at 0°C')],
+// 	[() => undefined, always('water boils at 100°C')],
+// 	[T, (temp) => 'nothing special happens at ' + temp + '°C'],
+// ])(5);
 
-console.log(fn);
+// console.log(fn);
+
+const lastFun = pipe(split` `, sort(ascend(last)));
+
+console.log(lastFun('take me to semynak')); // ['take', 'me', 'semynak', 'to']
