@@ -331,12 +331,8 @@
 
 // console.log(generateShape(8)); // '++++++++\n++++++++\n++++++++\n++++++++\n++++++++\n++++++++\n++++++++\n++++++++'
 
-// function validatePIN(pin) {
-// 	if (pin.length === 4 || pin.length === 6) {
-// 		return pin.split('').every((symbol) => !isNaN(symbol));
-// 	}
-// 	return false;
-// }
+// const validatePIN = (pin) =>
+// 	(pin.length === 4 || pin.length === 6) && [...pin].every((symbol) => symbol == parseInt(symbol));
 
 // console.log(validatePIN('123 '));
 // console.log(validatePIN('1234'));
@@ -1002,3 +998,16 @@
 // const last = (x) => x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 
 // console.log(last('take me to semynak')); // ['take', 'me', 'semynak', 'to']
+
+// const splitInParts = (string, partLength) =>
+// 	string
+// 		.match(new RegExp(`.{${partLength}}|.*`, 'g'))
+// 		.join(' ')
+// 		.trim();
+
+// console.log(
+// 	splitInParts(
+// 		'ehzqsxcwoufblzajpxyzljasisozjnzelytqelqbbnspynxtthwjqknjiyojiuanlhdbgczugaxvunsdvbkxdudflfqdtmgljucnopgcdkvfaflescrgsmhcszmexeepymidenvwqcczlicotkymgrlgnurjrnslejblddffnlxzwhhrlqhjwmvzvtdfkxlcalyhasvmqsfpfkxcblzsqomjpjsljkdzlexxaxvoacgolglzdmgjudehsxeqlrjxzcnwauikudpasdnznrlecmgsgrhqrniajdqaomd',
+// 		9
+// 	)
+// );

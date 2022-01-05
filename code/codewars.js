@@ -1,3 +1,12 @@
-const last = (x) => x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
+const splitInParts = (string, partLength) =>
+	string
+		.match(new RegExp(`.{${partLength}}|.*`, 'g'))
+		.join(' ')
+		.trim();
 
-console.log(last('take me to semynak')); // ['take', 'me', 'semynak', 'to']
+console.log(
+	splitInParts(
+		'ehzqsxcwoufblzajpxyzljasisozjnzelytqelqbbnspynxtthwjqknjiyojiuanlhdbgczugaxvunsdvbkxdudflfqdtmgljucnopgcdkvfaflescrgsmhcszmexeepymidenvwqcczlicotkymgrlgnurjrnslejblddffnlxzwhhrlqhjwmvzvtdfkxlcalyhasvmqsfpfkxcblzsqomjpjsljkdzlexxaxvoacgolglzdmgjudehsxeqlrjxzcnwauikudpasdnznrlecmgsgrhqrniajdqaomd',
+		9
+	)
+);
