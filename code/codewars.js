@@ -1,12 +1,3 @@
-const splitInParts = (string, partLength) =>
-	string
-		.match(new RegExp(`.{${partLength}}|.*`, 'g'))
-		.join(' ')
-		.trim();
+const spacify = (str) => [...str].join(' ');
 
-console.log(
-	splitInParts(
-		'ehzqsxcwoufblzajpxyzljasisozjnzelytqelqbbnspynxtthwjqknjiyojiuanlhdbgczugaxvunsdvbkxdudflfqdtmgljucnopgcdkvfaflescrgsmhcszmexeepymidenvwqcczlicotkymgrlgnurjrnslejblddffnlxzwhhrlqhjwmvzvtdfkxlcalyhasvmqsfpfkxcblzsqomjpjsljkdzlexxaxvoacgolglzdmgjudehsxeqlrjxzcnwauikudpasdnznrlecmgsgrhqrniajdqaomd',
-		9
-	)
-);
+console.log(spacify('hello world')); // 'h e l l o   w o r l d'
