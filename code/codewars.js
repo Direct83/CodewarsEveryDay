@@ -1,21 +1,5 @@
-const well = (inputArray) =>
-	['Fail!', 'Publish!', 'Publish!', 'I smell a series!'][
-		Math.min(3, inputArray.filter((idea) => idea === 'good').length)
-	];
-// function well(inputArray) {
-// 	const goodCounter = inputArray.filter((idea) => idea === 'good').length;
-// 	const isSeries = goodCounter > 2 ? 'I smell a series!' : 'Publish!';
-// 	return goodCounter !== 0 ? isSeries : 'Fail!';
-// }
-console.log(well(['bad', 'bad', 'bad', 'bad']));
+const switcher = (x) => x.reduce((a, b) => a + ' ?!abcdefghijklmnopqrstuvwxyz'[29 - b], '');
 
-const calculate = (str) =>
-	str
-		.split('plus')
-		.join(' ')
-		.split('minus')
-		.join(' -')
-		.split(' ')
-		.reduce((a, i) => a + +i, 0);
+console.log(switcher(['24', '12', '23', '22', '4', '26', '9', '8'])); // 'codewars'
 
-console.log(calculate('1plus2plus3minus4')); // 2
+console.log(switcher(['25', '7', '8', '4', '14', '23', '8', '25', '23', '29', '16', '16', '4'])); // 'btswmdsbd kkw'
