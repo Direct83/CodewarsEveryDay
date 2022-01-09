@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style type="text/css">
+			.focused {
+				outline: solid 2px red;
+			}
+		</style>
+	</head>
+	<body>
+		<form id="formElement">
+			One: <input type="text" /><br /><br />
+			Two: <input type="text" />
+		</form>
+
+		<script type="text/javascript">
+			const formElement = document.forms['formElement'];
+			const arrayElements = formElement.elements;
+
+			for (let i = 0; i < arrayElements.length; i++) {
+				formElement[i].onfocus = (event) => event.target.classList.add('focused');
+			}
+
+			for (let i = 0; i < arrayElements.length; i++) {
+				formElement[i].onblur = (event) => event.target.classList.remove('focused');
+			}
+		</script>
+	</body>
+</html>
