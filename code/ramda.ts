@@ -19,6 +19,18 @@ import {
 	map,
 	square,
 	partial,
+	addIndex,
+	flip,
+	inc,
+	modulo,
+	aperture,
+	compose,
+	converge,
+	sum,
+	divide,
+	apply,
+	juxt,
+	lift,
 } from 'ramda';
 
 // const longestWord = pipe(split` `, sort(ascend(length)), last);
@@ -59,3 +71,35 @@ import {
 
 // const sayHelloToMs = partial((x, y, g) => x + ' ' + y + ' ' + g + '!', ['Hello, Ms.']);
 // console.log(sayHelloToMs('Jane', 'Jones')); //=> 'Hello, Ms. Jane Jones!'
+/***************************************************************/
+// const increment = (numbers) => numbers.map((number, index) => (++index + number) % 10);
+// const sumWithIndex = pipe(add, inc, flip(modulo)(10));
+// const increment = addIndex(map)(sumWithIndex);
+
+// console.log(increment([4, 6, 7, 1, 3])); // [ 5, 8, 0, 5, 8 ]
+/***************************************************************/
+// function digitsAverage(input) {
+// 	if (input < 10) {
+// 		return input;
+// 	}
+// 	while (input > 9) {
+// 		input = String(input);
+// 		let array = [];
+// 		for (let i = 0; i < input.length - 1; i++) {
+// 			array.push(Math.round((+input[i] + +input[i + 1]) / 2));
+// 		}
+// 		input = +array.join('');
+// 	}
+// 	return input;
+// }
+function digitsAverage(input) {
+	const foo = pipe(aperture(2), map(converge(divide, [sum, length])));
+	let numbers = [...String(input)].map(Number);
+	while (numbers.length > 1) {
+		numbers = foo(numbers);
+	}
+	return numbers[0];
+}
+
+console.log(digitsAverage(246)); // 4
+/***************************************************************/
