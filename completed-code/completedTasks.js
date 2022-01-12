@@ -1137,3 +1137,7 @@
 // }
 
 // console.log(findAB([1, 2, 3], 3));
+
+// const validSpacing = (s) => s.trim() === s && !s.includes('  ');
+
+// console.log(validSpacing('RXd   ZqFy'));
