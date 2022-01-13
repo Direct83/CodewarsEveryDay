@@ -92,14 +92,22 @@ import {
 // 	}
 // 	return input;
 // }
-function digitsAverage(input) {
-	const foo = pipe(aperture(2), map(converge(divide, [sum, length])));
-	let numbers = [...String(input)].map(Number);
-	while (numbers.length > 1) {
-		numbers = foo(numbers);
-	}
-	return numbers[0];
-}
+// function digitsAverage(input) {
+// 	const foo = pipe(aperture(2), map(converge(divide, [sum, length])));
+// 	let numbers = [...String(input)].map(Number);
+// 	while (numbers.length > 1) {
+// 		numbers = foo(numbers);
+// 	}
+// 	return numbers[0];
+// }
 
-console.log(digitsAverage(246)); // 4
+// console.log(digitsAverage(246)); // 4
+/***************************************************************/
+// const reOrdering = (text) => text.replace(/(.+) ([A-Z]\w*)/, `$2 $1`);
+
+const reOrdering = require('ramda').replace(/(.+) ([A-Z]\w*)/)(`$2 $1`);
+
+console.log(reOrdering('ming Yao'));
+console.log(reOrdering('bull color pig Patrick'));
+
 /***************************************************************/
