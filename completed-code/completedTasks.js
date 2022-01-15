@@ -1155,3 +1155,7 @@
 
 // console.log(hydrate('2 glasses of wine and 1 shot')); // 3 glasses of water
 // console.log(hydrate('1 beer')); // 1 glass of water
+
+// const filterLucky = (arr) => arr.filter((number) => [...String(number)].includes('7'));
+
+// console.log(filterLucky([1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17]));
