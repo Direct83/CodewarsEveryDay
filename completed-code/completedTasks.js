@@ -1159,3 +1159,10 @@
 // const filterLucky = (arr) => arr.filter((number) => [...String(number)].includes('7'));
 
 // console.log(filterLucky([1, 2, 3, 4, 5, 6, 7, 68, 69, 70, 15, 17]));
+
+// const pattern = (n) =>
+// 	n < 1
+// 		? ''
+// 		: [...Array(n)].map((_, index) => `${++index}`.repeat(index)).join('\n');
+
+// console.log(pattern(2));
