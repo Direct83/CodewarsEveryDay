@@ -1176,3 +1176,8 @@
 
 // console.log(findEvenIndex([1, 2, 3, 4, 3, 2, 1]));
 // console.log(findEvenIndex([20, 10, 30, 10, 10, 15, 35]));
+
+// const summy = (stringOfInts) =>
+// 	stringOfInts.split(' ').reduce((acc, number) => acc + Number(number), 0);
+
+// console.log(summy('1 2 3')); // 6

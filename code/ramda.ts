@@ -31,6 +31,8 @@ import {
 	apply,
 	juxt,
 	lift,
+	assoc,
+	assocPath,
 } from 'ramda';
 
 // const longestWord = pipe(split` `, sort(ascend(length)), last);
@@ -105,9 +107,20 @@ import {
 /***************************************************************/
 // const reOrdering = (text) => text.replace(/(.+) ([A-Z]\w*)/, `$2 $1`);
 
-const reOrdering = require('ramda').replace(/(.+) ([A-Z]\w*)/)(`$2 $1`);
+// const reOrdering = require('ramda').replace(/(.+) ([A-Z]\w*)/)(`$2 $1`);
 
-console.log(reOrdering('ming Yao'));
-console.log(reOrdering('bull color pig Patrick'));
+// console.log(reOrdering('ming Yao'));
+// console.log(reOrdering('bull color pig Patrick'));
+
+/***************************************************************/
+
+const a = {
+	a: {
+		b: 1,
+	},
+	c: 1,
+};
+
+console.log(assocPath(['a', 'b'], 2, a));
 
 /***************************************************************/
