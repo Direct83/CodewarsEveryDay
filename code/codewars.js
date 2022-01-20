@@ -1,6 +1,4 @@
-String.prototype.vowel = function () {
-	return /^[aeiou]$/i.test(this);
-};
+const sumOfIntegersInString = (s) =>
+	s.split(/[^0-9]/).reduce((acc, number) => acc + Number(number), 0);
 
-console.log('E'.vowel()); // true
-console.log('lol'.vowel()); // false
+console.log(sumOfIntegersInString('12.4'));

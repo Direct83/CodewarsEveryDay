@@ -114,13 +114,19 @@ import {
 
 /***************************************************************/
 
-const a = {
-	a: {
-		b: 1,
-	},
-	c: 1,
-};
+// const a = {
+// 	a: {
+// 		b: 1,
+// 	},
+// 	c: 1,
+// };
 
-console.log(assocPath(['a', 'b'], 2, a));
+// console.log(assocPath(['a', 'b'], 2, a));
 
+/***************************************************************/
+// const sumOfIntegersInString = (s) =>
+// 	s.split(/[^0-9]/).reduce((acc, number) => acc + Number(number), 0);
+// const sumOfIntegersInString = pipe(match(/\d+/g), sum);
+
+// console.log(sumOfIntegersInString('12.4'));
 /***************************************************************/
