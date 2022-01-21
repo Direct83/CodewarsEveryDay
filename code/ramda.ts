@@ -1,3 +1,4 @@
+import { SourceMap } from 'module';
 import {
 	pipe,
 	ascend,
@@ -33,6 +34,8 @@ import {
 	lift,
 	assoc,
 	assocPath,
+	splitEvery,
+	toString,
 } from 'ramda';
 
 // const longestWord = pipe(split` `, sort(ascend(length)), last);
@@ -129,4 +132,11 @@ import {
 // const sumOfIntegersInString = pipe(match(/\d+/g), sum);
 
 // console.log(sumOfIntegersInString('12.4'));
+/***************************************************************/
+
+// const digitize = (n) => [...String(n)].map(Number);
+// const digitize = pipe(toString, splitEvery(1), map(Number));
+
+// console.log(digitize(8675309)); // [8,6,7,5,3,0,9]
+
 /***************************************************************/

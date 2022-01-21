@@ -1,4 +1,3 @@
-const sumOfIntegersInString = (s) =>
-	s.split(/[^0-9]/).reduce((acc, number) => acc + Number(number), 0);
+const digitize = (n) => [...String(n)].map(Number);
 
-console.log(sumOfIntegersInString('12.4'));
+console.log(digitize(8675309)); // [8,6,7,5,3,0,9]
