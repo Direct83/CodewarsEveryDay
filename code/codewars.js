@@ -1,3 +1,4 @@
-const digitize = (n) => [...String(n)].map(Number);
+const getSumOfDigits = (integer) =>
+	[...String(integer)].reduce((acc, number) => acc + Number(number), 0);
 
-console.log(digitize(8675309)); // [8,6,7,5,3,0,9]
+console.log(getSumOfDigits(123)); // 6
