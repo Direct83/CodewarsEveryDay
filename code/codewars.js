@@ -1,11 +1,9 @@
-const firstSlash = '/';
-const rest = '/str/number'.slice(1);
-
-console.log(firstSlash + rest.slice(0, rest.indexOf('/')));
-
-const solve = (str) => {
-	const symbols = [...str].filter((symbol) => symbol !== ' ');
-	return str.replace(/\S/g, (_) => symbols.pop());
-};
-
-console.log(solve('i love codewars')); // s rawe docevoli
+const dbSort = (array) =>
+	array.sort(
+		(a, b) =>
+			(typeof a === 'string') - (typeof b === 'string') || (a > b) - (a < b)
+	);
+console.log(
+	dbSort(['Apple', 46, '287', 574, 'Peach', '3', '69', 78, 'Grape', '423'])
+);
+// [46, 78, 574, '287', '3', '423', '69', 'Apple', 'Grape', 'Peach']

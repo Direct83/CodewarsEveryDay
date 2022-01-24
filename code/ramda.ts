@@ -36,6 +36,10 @@ import {
 	assocPath,
 	splitEvery,
 	toString,
+	either,
+	sortWith,
+	is,
+	identity,
 } from 'ramda';
 
 // const longestWord = pipe(split` `, sort(ascend(length)), last);
@@ -139,4 +143,15 @@ import {
 
 // console.log(digitize(8675309)); // [8,6,7,5,3,0,9]
 
+/***************************************************************/
+// const dbSort = (array) =>
+// 	array.sort(
+// 		(a, b) =>
+// 			(typeof a === 'string') - (typeof b === 'string') || (a > b) - (a < b)
+// 	);
+// const dbSort = sortWith([ascend(is(String)), ascend(identity)]);
+
+// console.log(
+// 	dbSort(['Apple', 46, '287', 574, 'Peach', '3', '69', 78, 'Grape', '423'])
+// );
 /***************************************************************/
