@@ -1205,3 +1205,5 @@
 // // [46, 78, 574, '287', '3', '423', '69', 'Apple', 'Grape', 'Peach']
 
 // const problem = (x) => (typeof x === 'string' ? 'Error' : x * 50 + 6);
+
+// const powersOfTwo = (n) => [...Array(n + 1)].map((_, index) => 2 ** index);
