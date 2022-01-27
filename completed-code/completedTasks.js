@@ -1207,3 +1207,5 @@
 // const problem = (x) => (typeof x === 'string' ? 'Error' : x * 50 + 6);
 
 // const powersOfTwo = (n) => [...Array(n + 1)].map((_, index) => 2 ** index);
+
+// const isPalindrome = (x) => [...x].reverse().join('').toLowerCase() === x.toLowerCase()
