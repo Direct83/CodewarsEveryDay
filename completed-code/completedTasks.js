@@ -1209,3 +1209,7 @@
 // const powersOfTwo = (n) => [...Array(n + 1)].map((_, index) => 2 ** index);
 
 // const isPalindrome = (x) => [...x].reverse().join('').toLowerCase() === x.toLowerCase()
+
+// const reverse = (string) => string.split(' ').reverse().join(' ')
+
+// const reverse = (string) => string.split(' ').reverse().join(' ');

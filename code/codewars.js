@@ -1,2 +1,1 @@
-const isPalindrome = (x) =>
-	[...x].reverse().join('').toLowerCase() === x.toLowerCase();
+const reverse = (string) => string.split(' ').reverse().join(' ');
