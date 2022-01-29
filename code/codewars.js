@@ -1,1 +1,1 @@
-const reverse = (string) => string.split(' ').reverse().join(' ');
+const formatMoney = (amount) => `$${amount.toFixed(2)}`;
