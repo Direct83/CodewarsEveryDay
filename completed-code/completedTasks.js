@@ -1213,3 +1213,5 @@
 // const reverse = (string) => string.split(' ').reverse().join(' ')
 
 // const formatMoney = (amount) => `$${amount.toFixed(2)}`;
+
+// const nameShuffler = (str) => str.split(' ').reverse().join(' ')
