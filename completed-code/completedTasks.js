@@ -1215,3 +1215,5 @@
 // const formatMoney = (amount) => `$${amount.toFixed(2)}`;
 
 // const nameShuffler = (str) => str.split(' ').reverse().join(' ')
+
+// const explode = (s) => [...s].map(symbol => symbol.repeat(symbol)).join('');
