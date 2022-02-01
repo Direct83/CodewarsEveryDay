@@ -1217,3 +1217,5 @@
 // const nameShuffler = (str) => str.split(' ').reverse().join(' ')
 
 // const explode = (s) => [...s].map(symbol => symbol.repeat(symbol)).join('');
+
+// const addLength = (str) => str.split(' ').map((el) => `${el} ${el.length}`);
