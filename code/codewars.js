@@ -1,1 +1,1 @@
-const addLength = (str) => str.split(' ').map((el) => `${el} ${el.length}`);
+const toBinary = (n) => +n.toString(2);
