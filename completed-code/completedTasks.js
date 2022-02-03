@@ -1221,3 +1221,7 @@
 // const addLength = (str) => str.split(' ').map((el) => `${el} ${el.length}`);
 
 // const toBinary = (n) => +n.toString(2);
+
+// String.prototype.isLetter = function () {
+// 	return /^[a-zA-Z]$/g.test(this);
+// };
