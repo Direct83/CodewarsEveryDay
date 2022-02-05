@@ -1,13 +1,17 @@
-const reverse = (number) =>
-	Math.sign(number) * [...String(Math.abs(number))].reverse().join('');
+const initializeNames = (name) =>
+	name
+		.split(' ')
+		.reduce((acc, word, index, arr) => {
+			if (index === 0 || index === arr.length - 1) {
+				acc += word + ' ';
+			}
+			if (index !== 0 && index !== arr.length - 1) {
+				acc += word[0] + '. ';
+			}
+			return acc;
+		}, '')
+		.trim();
 
-console.log(reverse(-423)); // -324
+// const initializeNames = (name) => name.replace(/ (\w)\w*(?= )/g, ' $1.');
 
-const isWalidWalk = (walk) =>
-	walk.length + 1 !== 10 &&
-	walk.reduce((acc, el, index) => {
-		acc[el] = ++acc[el] || 1;
-		return index === walk.length - 1 ? acc.n === acc.s && acc.w === acc.e : acc;
-	}, {});
-
-console.log(isWalidWalk(['n', 's', 'w', 'e', 'n', 's', 'n', 's', 'w', 'e'])); // true
+console.log(initializeNames('Alice Betty Catherine Davis'));
