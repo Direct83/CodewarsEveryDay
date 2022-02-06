@@ -1,17 +1,15 @@
-const initializeNames = (name) =>
-	name
+const removeConsecutiveDuplicates = (s) =>
+	s
 		.split(' ')
-		.reduce((acc, word, index, arr) => {
-			if (index === 0 || index === arr.length - 1) {
-				acc += word + ' ';
-			}
-			if (index !== 0 && index !== arr.length - 1) {
-				acc += word[0] + '. ';
-			}
-			return acc;
-		}, '')
-		.trim();
+		.reduce(
+			(acc, _, index, arr) => [
+				...acc,
+				...(arr[index] !== arr[index + 1] ? [arr[index]] : []),
+			],
+			[]
+		)
+		.join(' ');
 
-// const initializeNames = (name) => name.replace(/ (\w)\w*(?= )/g, ' $1.');
-
-console.log(initializeNames('Alice Betty Catherine Davis'));
+console.log(
+	removeConsecutiveDuplicates('alpha beta gamma delta alpha beta gamma delta')
+);
