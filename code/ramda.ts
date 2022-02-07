@@ -40,6 +40,8 @@ import {
 	sortWith,
 	is,
 	identity,
+	adjust,
+	range,
 } from 'ramda';
 
 // const longestWord = pipe(split` `, sort(ascend(length)), last);
@@ -154,4 +156,11 @@ import {
 // console.log(
 // 	dbSort(['Apple', 46, '287', 574, 'Peach', '3', '69', 78, 'Grape', '423'])
 // );
-/***************************************************************/
+// /***************************************************************/
+
+// console.log(pipe(assoc('a', 2), assoc('b', 3))({ a: 1 }));
+// const generateIntegers = (m, n) =>
+// 	[...Array(n - m + 1)].map((_, index) => index + m);
+
+// const generateIntegers = pipe(Array, adjust(inc, 1), apply(range));
+// /***************************************************************/
