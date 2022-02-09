@@ -1,4 +1,5 @@
-const countLettersAndDigits = (input) =>
-	input.length - input.replace(/[0-9a-z]/gi, '').length;
-
-console.log(countLettersAndDigits('*14(K. 3'));
+const makeString = (string) =>
+	string
+		.split(' ')
+		.map((word) => word[0])
+		.join('');
