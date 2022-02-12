@@ -1,1 +1,3 @@
-const lastDigit = (n, d) => [...String(n)].splice(-d, d).map(Number);
+function args_count() {
+	return arguments.length;
+}
