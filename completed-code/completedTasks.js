@@ -1082,6 +1082,7 @@
 // };
 
 // console.log(queryObjectify(argQuery));
+
 // const reverse = (array) => array.reduce((acc, el) => [el].concat(acc), []);
 
 // console.log(reverse([1, 2, 3]));
@@ -1339,3 +1340,15 @@
 // const cubeSum = (a, b) => Math.abs(a ** 2 * (a + 1) ** 2 - b ** 2 * (b + 1) ** 2) / 4;
 
 // const root = (x, n) => Math.pow(x, 1/n)
+
+// const validateWord = (string) =>
+// 	[...string.toLowerCase()].reduce((acc, symbol, index, arr) => {
+// 		acc[symbol] = ++acc[symbol] || 1;
+// 		if (index === arr.length - 1) {
+// 			const values = Object.values(acc);
+// 			return values.every((el) => el === values[0]);
+// 		}
+// 		return acc;
+// 	}, {});
+
+// console.log(validateWord('Abcabc'));

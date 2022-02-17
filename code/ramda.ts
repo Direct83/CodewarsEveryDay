@@ -42,6 +42,10 @@ import {
 	identity,
 	adjust,
 	range,
+	countBy,
+	toLower,
+	uniq,
+	values,
 } from 'ramda';
 
 // const longestWord = pipe(split` `, sort(ascend(length)), last);
@@ -163,4 +167,20 @@ import {
 // 	[...Array(n - m + 1)].map((_, index) => index + m);
 
 // const generateIntegers = pipe(Array, adjust(inc, 1), apply(range));
+// /***************************************************************/
+
+// const validateWord = (string) =>
+// 	[...string.toLowerCase()].reduce((acc, symbol, index, arr) => {
+// 		acc[symbol] = ++acc[symbol] || 1;
+// 		if (index === arr.length - 1) {
+// 			const values = Object.values(acc);
+// 			return values.every((el) => el === values[0]);
+// 		}
+// 		return acc;
+// 	}, {});
+
+// const validateWord = pipe(countBy(toLower), values, uniq, length, equals(1));
+
+// console.log(validateWord('Abcabc'));
+
 // /***************************************************************/
