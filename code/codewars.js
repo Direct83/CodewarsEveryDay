@@ -1,4 +1,12 @@
-const uniqueSum = (lst) =>
-	[...new Set(lst)].reduce((acc, number) => acc + number, null);
+const searchNames = (logins) =>
+	logins.filter((login) => login[0].endsWith('_'));
 
-console.log(uniqueSum([1, 3, 8, 1, 8])); // 12
+console.log(
+	searchNames([
+		['f_o_o', 'foo@foo.com'],
+		['bar_', 'bar@bar.com'],
+		['b_a_r_', 'foobar@fb.com'],
+		['_barfoot', 'bar_foot@fb.com'],
+		['_barfoot_', 'bar_foo@fb.com'],
+	])
+);
