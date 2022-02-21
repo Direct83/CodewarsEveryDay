@@ -1,12 +1,12 @@
-const searchNames = (logins) =>
-	logins.filter((login) => login[0].endsWith('_'));
+function isVeryEvenNumber(num) {
+	while (String(num).length > 1) {
+		num = [...String(num)].reduce((acc, nos) => acc + Number(nos), 0);
+	}
+	return num % 2 === 0;
+}
 
 console.log(
-	searchNames([
-		['f_o_o', 'foo@foo.com'],
-		['bar_', 'bar@bar.com'],
-		['b_a_r_', 'foobar@fb.com'],
-		['_barfoot', 'bar_foot@fb.com'],
-		['_barfoot_', 'bar_foo@fb.com'],
-	])
+	isVeryEvenNumber(1234)
+	// 0, 4, 12, 222, 5, 45, 4554, 1234, 88, 24, 400000220
+	// true, true, false, true, false, false, false, false, false, true, true
 );
