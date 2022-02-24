@@ -1,4 +1,1 @@
-const numberToPower = (number, power) =>
-	[...Array(power)].reduce((acc) => acc * number, 1);
-
-console.log(numberToPower(10, 4));
+const stringClean=(s)=>s.replace(/[^a-z!\s~#$%^&!@*():;"'.,?]/ig,'')
