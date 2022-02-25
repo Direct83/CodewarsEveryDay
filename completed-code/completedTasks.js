@@ -1403,3 +1403,7 @@
 // console.log(numberToPower(10, 4));
 
 // const stringClean=(s)=>s.replace(/[^a-z!\s~#$%^&!@*():;"'.,?]/ig,'')
+
+// const getNumberFromString = (s) => Number(s.match(/\d/g).join(''));
+
+// console.log(getNumberFromString('123'));
