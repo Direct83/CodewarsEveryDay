@@ -1,7 +1,4 @@
-function calculator(a, b, sign) {
-	try {
-		return eval(`${a}${sign}${b}`);
-	} catch (e) {
-		return 'unknown value';
-	}
-}
+const lowercaseCount = (str) =>
+	[...str].reduce((acc, word) => (/[a-z]/.test(word) ? ++acc : acc), 0);
+
+console.log(lowercaseCount("abcABC123!@€£#$%^&*()_-+=}{[]|':;?/>.<,~"));
