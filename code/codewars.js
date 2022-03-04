@@ -1,18 +1,14 @@
-function Counter() {
-	this.value = 0;
+function whatday(num) {
+	const weekday = [
+		'Sunday',
+		'Monday',
+		'Tuesday',
+		'Wednesday',
+		'Thursday',
+		'Friday',
+		'Saturday',
+	];
+	return weekday[num - 1] || 'Wrong, please enter a number between 1 and 7';
 }
 
-Counter.prototype.increase = function () {
-	return this.value++;
-};
-
-Counter.prototype.getValue = function () {
-	return this.value;
-};
-
-Counter.prototype.reset = function () {
-	return (this.value = 0);
-};
-
-const counter = new Counter();
-console.log(counter.increase());
+console.log(whatday(1));
