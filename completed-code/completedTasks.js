@@ -1438,7 +1438,7 @@
 // console.log(counter.increase());
 
 // function whatday(num) {
-// 	const weekday = [
+// 	const weekdays = [
 // 		'Sunday',
 // 		'Monday',
 // 		'Tuesday',
@@ -1451,3 +1451,6 @@
 // }
 
 // console.log(whatday(1));
+
+// const anyArrows = (arrows) =>
+// 	arrows.filter((arrow) => arrow['damaged']).length < arrows.length;
