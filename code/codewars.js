@@ -1,2 +1,11 @@
-const anyArrows = (arrows) =>
-	arrows.filter((arrow) => arrow['damaged']).length < arrows.length;
+const Person = function () {
+	const person = {
+		_name: 'Leroy',
+		_friends: [],
+		fillFriends(friends) {
+			this._friends = friends;
+		},
+	};
+	return person;
+};
+
