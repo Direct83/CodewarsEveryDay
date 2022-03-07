@@ -1,11 +1,3 @@
-const Person = function () {
-	const person = {
-		_name: 'Leroy',
-		_friends: [],
-		fillFriends(friends) {
-			this._friends = friends;
-		},
-	};
-	return person;
-};
+const shortenToDate = (longDate) => longDate.replace(/,.*/g, '');
 
+console.log(shortenToDate('Friday May 2, 9am'));
