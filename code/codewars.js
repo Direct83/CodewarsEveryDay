@@ -1,1 +1,1 @@
-const reverseList = (list) => list.reverse();
+const distinct = (a) => [...new Set(a)];
