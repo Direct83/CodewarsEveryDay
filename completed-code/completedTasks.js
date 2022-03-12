@@ -1485,3 +1485,14 @@
 // 		.filter(Boolean);
 
 // console.log(mergeArrays([1, 2, 3, 4, 5, 6, 7, 8], ['a', 'b', 'c']));
+
+// const singleDigit = (n) =>
+// 	String(n).length < 2
+// 		? n
+// 		: singleDigit(
+// 				[...n.toString(2)].reduce((acc, number) => acc + Number(number), 0)
+// 		  );
+
+// console.log(singleDigit(5665));
+// console.log(singleDigit(123456789));
+// console.log(singleDigit(5));

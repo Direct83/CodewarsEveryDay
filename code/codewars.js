@@ -1,6 +1,10 @@
-const mergeArrays = (firstArray, secondArray) =>
-	[...Array(Math.max(firstArray.length, secondArray.length))]
-		.reduce((acc, _, i) => acc.concat(firstArray[i], secondArray[i]), [])
-		.filter(Boolean);
+const singleDigit = (n) =>
+	String(n).length < 2
+		? n
+		: singleDigit(
+				[...n.toString(2)].reduce((acc, number) => acc + Number(number), 0)
+		  );
 
-console.log(mergeArrays([1, 2, 3, 4, 5, 6, 7, 8], ['a', 'b', 'c']));
+console.log(singleDigit(5665));
+console.log(singleDigit(123456789));
+console.log(singleDigit(5));
