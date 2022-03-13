@@ -1496,3 +1496,6 @@
 // console.log(singleDigit(5665));
 // console.log(singleDigit(123456789));
 // console.log(singleDigit(5));
+
+// const getAverage = (marks) =>
+// 	Math.floor(marks.reduce((acc, number) => acc + number, 0) / marks.length);
