@@ -1,6 +1,4 @@
-const spongeMeme = (sentence) =>
-	[...sentence]
-		.map((word, index) => (index % 2 ? word.toLowerCase() : word.toUpperCase()))
-		.join('');
+const filterArray = (arr, target) =>
+	arr.filter((name) => name.length === target);
 
-console.log(spongeMeme('stop Making spongebob Memes!'));
+console.log(filterArray(['Олень', 'Сосна', 'Грибы', 'Береза', 'Медведь'], 6));
