@@ -1512,3 +1512,15 @@
 // 		.reduce((acc, number) => acc + number, 0);
 
 // console.log(maxTriSum([3, 2, 6, 8, 2, 3]));
+
+// function zeros(number) {
+// 	let result = 0;
+// 	while (number > 0) {
+// 		number = Math.floor(number / 5);
+// 		result += number;
+// 	}
+
+// 	return result;
+// }
+
+// console.log(zeros(30));

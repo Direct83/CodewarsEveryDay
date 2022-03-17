@@ -1,7 +1,11 @@
-const maxTriSum = (numbers) =>
-	[...new Set(numbers)]
-		.sort((a, b) => b - a)
-		.slice(0, 3)
-		.reduce((acc, number) => acc + number, 0);
+function zeros(number) {
+	let result = 0;
+	while (number > 0) {
+		number = Math.floor(number / 5);
+		result += number;
+	}
 
-console.log(maxTriSum([3, 2, 6, 8, 2, 3]));
+	return result;
+}
+
+console.log(zeros(30));
