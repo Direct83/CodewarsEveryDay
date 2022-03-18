@@ -1,11 +1,19 @@
-function zeros(number) {
-	let result = 0;
-	while (number > 0) {
-		number = Math.floor(number / 5);
-		result += number;
+class A {
+	name() {
+		return 'alpha';
 	}
-
-	return result;
+	hi() {
+		return `bye ${this.name()}`;
+	}
 }
 
-console.log(zeros(30));
+class B extends A {
+	name() {
+		return `${super.name()}/beta`;
+	}
+	hi() {
+		return `hi ${this.name()}`;
+	}
+}
+
+console.log(B.prototype.hi.call(new A()));
