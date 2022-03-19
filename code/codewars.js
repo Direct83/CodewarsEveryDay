@@ -1,19 +1,8 @@
-class A {
-	name() {
-		return 'alpha';
-	}
-	hi() {
-		return `bye ${this.name()}`;
-	}
+function evaluate(str) {
+	const [operator, number1, number2] = str.replace(/\(|\)/g, '').split(' ');
+
+	return eval(number1 + operator + number2);
 }
 
-class B extends A {
-	name() {
-		return `${super.name()}/beta`;
-	}
-	hi() {
-		return `hi ${this.name()}`;
-	}
-}
-
-console.log(B.prototype.hi.call(new A()));
+console.log(evaluate('(* 3 3)'));
+console.log(evaluate('(- 420 69)'));
