@@ -1553,3 +1553,5 @@
 
 // console.log(evaluate('(* 3 3)'));
 // console.log(evaluate('(- 420 69)'));
+
+// const shortcut = (string) => string.replace(/[aeiou]/g, '');
