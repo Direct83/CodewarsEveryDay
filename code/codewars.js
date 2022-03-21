@@ -1,1 +1,1 @@
-const shortcut = (string) => string.replace(/[aeiou]/g, '');
+const cookingTime = (eggs) => 5 * Math.ceil(eggs / 8);
