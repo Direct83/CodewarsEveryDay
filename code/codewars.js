@@ -1,1 +1,1 @@
-const cookingTime = (eggs) => 5 * Math.ceil(eggs / 8);
+const isRubyComing = (list) => list.some((el) => el.language === 'Ruby');
