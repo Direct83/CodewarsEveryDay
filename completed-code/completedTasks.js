@@ -1557,3 +1557,10 @@
 // const shortcut = (string) => string.replace(/[aeiou]/g, '');
 
 // const cookingTime = (eggs) => 5 * Math.ceil(eggs / 8);
+
+// function getFirstPython(list) {
+// 	const phytonUser = list.find((user) => user.language === 'Python');
+// 	return phytonUser
+// 		? `${phytonUser.firstName}, ${phytonUser.country}`
+// 		: 'There will be no Python developers';
+// }
