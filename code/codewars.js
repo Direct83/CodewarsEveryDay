@@ -1,9 +1,28 @@
-function calc(x) {
-	const sum = (n) => [...n].reduce((a, b) => +a + +b);
-	const total1 = x.replace(/./g, (x) => x.charCodeAt(0));
-	const total2 = total1.replace(/7/g, '1');
+function outed(meet, boss) {
+	const meetArray = Object.entries(meet);
 
-	return sum(total1) - sum(total2);
+	const averageRating =
+		meetArray
+			.map((el) => (el[0] === boss ? el[1] * 2 : el[1]))
+			.reduce((acc, el) => acc + el) / meetArray.length;
+	return averageRating <= 5 ? 'Get Out Now!' : 'Nice Work Champ!';
 }
 
-console.log(calc('abcdef'));
+console.log(
+	outed(
+		{
+			tim: 0,
+			jim: 2,
+			randy: 0,
+			sandy: 7,
+			andy: 0,
+			katie: 5,
+			laura: 1,
+			saajid: 2,
+			alex: 3,
+			john: 2,
+			mr: 0,
+		},
+		'laura'
+	)
+);
