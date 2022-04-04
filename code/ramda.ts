@@ -46,6 +46,8 @@ import {
 	toLower,
 	uniq,
 	values,
+	ifElse,
+	gte,
 } from 'ramda';
 
 // const longestWord = pipe(split` `, sort(ascend(length)), last);
@@ -182,5 +184,17 @@ import {
 // const validateWord = pipe(countBy(toLower), values, uniq, length, equals(1));
 
 // console.log(validateWord('Abcabc'));
+
+// /***************************************************************/
+
+// const catMouse = (x) => (x.length <= 5 ? 'Caught!' : 'Escaped!');
+
+// const catMouse = ifElse(
+// 	pipe(length, gte`5`),
+// 	always('Caught!'),
+// 	always('Escaped!')
+// );
+
+// console.log(catMouse('C....m'));
 
 // /***************************************************************/
