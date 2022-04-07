@@ -1,6 +1,5 @@
-const unluckyDays = (year) =>
-	[...Array(12)].filter((_, index) => new Date(year, index, 13).getDay() === 5)
-		.length;
+const specialNumber = (n) => (/[6-9]/.test(n) ? 'NOT!!' : 'Special!!');
 
-console.log(unluckyDays(1586));
-console.log(unluckyDays(1001));
+console.log(specialNumber(2));
+console.log(specialNumber(92));
+console.log(specialNumber(2783));
