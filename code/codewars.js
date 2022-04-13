@@ -1,3 +1,7 @@
-const sumRange = (start, end) => ((end + start) * (end - start - 1) * -1) / 2;
+function houseNumbersSum(inputArray) {
+	const index = inputArray.findIndex((el) => el === 0);
 
-console.log(sumRange(10, 1));
+	return inputArray.slice(0, index).reduce((acc, number) => acc + number, 0);
+}
+
+console.log(houseNumbersSum([5, 1, 2, 3, 0, 1, 5, 0, 2]));
