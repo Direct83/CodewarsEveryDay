@@ -1,7 +1,11 @@
-function houseNumbersSum(inputArray) {
-	const index = inputArray.findIndex((el) => el === 0);
-
-	return inputArray.slice(0, index).reduce((acc, number) => acc + number, 0);
+function sumOfN(n) {
+	const array = [];
+	array[0] = 0;
+	for (let i = 1; i < Math.abs(n) + 1; i++) {
+		if (n > 0) array[i] = array[i - 1] + i;
+		else array[i] = array[i - 1] - i;
+	}
+	return array;
 }
 
-console.log(houseNumbersSum([5, 1, 2, 3, 0, 1, 5, 0, 2]));
+console.log(sumOfN(3));
