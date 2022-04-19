@@ -1776,3 +1776,5 @@
 // }
 
 // console.log(isSameLanguage(list2));
+
+// const closestMultiple10 = (num) => Math.round(num / 10) * 10;
