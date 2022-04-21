@@ -1,26 +1,9 @@
-function paintLetterboxes(start, end) {
-	const allNumbers = [...Array(end + 1).keys()].slice(start);
+const check = (str) => (/^[a-z]+$/gi.test(str || '') ? str : '');
+const calc = (s) =>
+	[...s.toUpperCase()].reduce((acc, symbol) => acc + symbol.charCodeAt(), 0);
+const compare = (s1, s2) => calc(check(s1)) === calc(check(s2));
 
-	const splitIntoDigits = allNumbers.map((num) => String(num).split(''));
-
-	const allDigits = splitIntoDigits.flat();
-
-	const startObject = [...Array(10).keys()].reduce(
-		(acc, cur) => ({ ...acc, [cur]: 0 }),
-		{}
-	);
-
-	const counted = allDigits.reduce(
-		(acc, cur) => ({ ...acc, [cur]: acc[cur] + 1 }),
-		startObject
-	);
-
-	const result = Object.entries(counted).reduce(
-		(acc, cur) => [...acc, cur[1]],
-		[]
-	);
-
-	return result;
-}
-
-console.log(paintLetterboxes(125, 132));
+console.log(compare('AD', 'BC'));
+console.log(compare('gf', 'FG'));
+console.log(compare('AD', 'DD'));
+console.log(compare('zz1', ''));
