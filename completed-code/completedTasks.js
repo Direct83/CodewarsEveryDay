@@ -1815,3 +1815,7 @@
 // console.log(compare('gf', 'FG'));
 // console.log(compare('AD', 'DD'));
 // console.log(compare('zz1', ''));
+
+// const vowel2index = (str) => str.replace(/[aeiou]/gi, (m, i) => i + 1);
+
+// console.log(vowel2index('this is my string'));
