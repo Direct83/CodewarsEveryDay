@@ -1,3 +1,4 @@
-const vowel2index = (str) => str.replace(/[aeiou]/gi, (m, i) => i + 1);
+const modifiedSum = (a, n) => a.reduce((acc, el) => acc + el ** n - el, 0);
 
-console.log(vowel2index('this is my string'));
+console.log(modifiedSum([1, 2, 3], 3));
+console.log(modifiedSum([1, 2], 5));
