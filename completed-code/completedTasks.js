@@ -1843,3 +1843,11 @@
 // console.log(minimumSteps([8, 9, 10, 4, 2], 23));
 // console.log(minimumSteps([10, 9, 9, 8], 17));
 // console.log(minimumSteps([4, 6, 3], 7));
+
+// function meeting(x) {
+// 	const index = x.findIndex((el) => el === 'O');
+// 	return index > -1 ? index : 'None available!';
+// }
+
+// console.log(meeting(['X', 'O', 'X']));
+// console.log(meeting(['X', 'X', 'X', 'X', 'X']));
