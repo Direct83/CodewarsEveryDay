@@ -1865,3 +1865,12 @@
 
 // console.log(maxGap([13, 10, 2, 9, 5]));
 // console.log(maxGap([24, 299, 131, 14, 26, 25]));
+
+// function sortMyString(str) {
+// 	const arrStr = [...str];
+// 	const even = arrStr.filter((_, i) => i % 2 === 0).join('');
+// 	const odd = arrStr.filter((_, i) => i % 2 !== 0).join('');
+// 	return even + ' ' + odd;
+// }
+
+// console.log(sortMyString('CodeWars'));
