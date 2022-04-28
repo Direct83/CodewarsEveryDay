@@ -1,8 +1,1 @@
-function sortMyString(str) {
-	const arrStr = [...str];
-	const even = arrStr.filter((_, i) => i % 2 === 0).join('');
-	const odd = arrStr.filter((_, i) => i % 2 !== 0).join('');
-	return even + ' ' + odd;
-}
-
-console.log(sortMyString('CodeWars'));
+const squaresNeeded = (grains) => Math.ceil(Math.log2(grains + 1));
