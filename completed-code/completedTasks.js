@@ -1876,3 +1876,9 @@
 // console.log(sortMyString('CodeWars'));
 
 // const squaresNeeded = (grains) => Math.ceil(Math.log2(grains + 1));
+
+// const lastSurvivor = (letters, coords) =>
+// 	coords.reduce(
+// 		(acc, coord) => acc.slice(0, coord) + acc.slice(coord + 1),
+// 		letters
+// 	);
