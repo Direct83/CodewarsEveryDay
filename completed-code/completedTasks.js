@@ -1895,3 +1895,4 @@
 
 // console.log(countChar('Fancy fifth fly aloof', 'f'));
 // console.log(countChar2('Fancy fifth fly aloof', 'f'));
+//
