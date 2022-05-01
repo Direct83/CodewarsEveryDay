@@ -1896,3 +1896,7 @@
 // console.log(countChar('Fancy fifth fly aloof', 'f'));
 // console.log(countChar2('Fancy fifth fly aloof', 'f'));
 //
+
+// const evensAndOdds = (num) => (num % 2 ? num.toString(16) : num.toString(2));
+
+// console.log(evensAndOdds(2));
