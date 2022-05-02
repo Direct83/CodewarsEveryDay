@@ -1,3 +1,8 @@
-const evensAndOdds = (num) => (num % 2 ? num.toString(16) : num.toString(2));
+const isNarcissistic = (n) =>
+	[...String(n)].reduce((acc, el, _, arr) => {
+		acc += el ** arr.length;
+		return acc;
+	}, 0) === n;
 
-console.log(evensAndOdds(2));
+console.log(isNarcissistic(1634));
+console.log(isNarcissistic(8208));
