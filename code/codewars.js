@@ -1,27 +1,4 @@
-class Block {
-	constructor([width, length, height]) {
-		this.width = width;
-		this.length = length;
-		this.height = height;
-	}
-	getWidth() {
-		return this.width;
-	}
-	getLength() {
-		return this.length;
-	}
-	getHeight() {
-		return this.height;
-	}
-	getVolume() {
-		return this.width * this.length * this.height;
-	}
-	getSurfaceArea() {
-		return (
-			2 *
-			(this.width * this.height +
-				this.width * this.length +
-				this.height * this.length)
-		);
-	}
-}
+const reverseBits = (n) =>
+	parseInt([...String(n.toString(2))].reverse().join(''), 2);
+
+console.log(reverseBits(417));
