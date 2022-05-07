@@ -1,126 +1,77 @@
-const list1 = [
-	{
-		firstName: 'Maria',
-		lastName: 'Y.',
-		country: 'Cyprus',
-		continent: 'Europe',
-		age: 30,
-		language: 'Java',
-	},
-	{
-		firstName: 'Victoria',
-		lastName: 'T.',
-		country: 'Puerto Rico',
-		continent: 'Americas',
-		age: 70,
-		language: 'Python',
-	},
-];
-const list2 = [
-	{
-		firstName: 'Noa',
-		lastName: 'A.',
-		country: 'Israel',
-		continent: 'Asia',
-		age: 20,
-		language: 'Ruby',
-	},
-	{
-		firstName: 'Andrei',
-		lastName: 'E.',
-		country: 'Romania',
-		continent: 'Europe',
-		age: 21,
-		language: 'C',
-	},
-];
+function boredom(staff) {
+	const score = {
+		accounts: 1,
+		finance: 2,
+		canteen: 10,
+		regulation: 3,
+		trading: 6,
+		change: 6,
+		IS: 8,
+		retail: 5,
+		cleaning: 4,
+		'pissing about': 25,
+	};
 
-const list3 = [
-	{
-		firstName: 'Emily',
-		lastName: 'A.',
-		country: 'Northern Ireland',
-		continent: 'Europe',
-		age: 32,
-		language: 'JavaScript',
-	},
-	{
-		firstName: 'Nor',
-		lastName: 'E.',
-		country: 'Malaysia',
-		continent: 'Asia',
-		age: 21,
-		language: 'Clojure',
-	},
-	{
-		firstName: 'Maia',
-		lastName: 'S.',
-		country: 'Tahiti',
-		continent: 'Oceania',
-		age: 28,
-		language: 'Clojure',
-	},
-	{
-		firstName: 'Mohammad',
-		lastName: 'N.',
-		country: 'United Arab Emirates',
-		continent: 'Asia',
-		age: 39,
-		language: 'C',
-	},
-	{
-		firstName: 'Odval',
-		lastName: 'F.',
-		country: 'Mongolia',
-		continent: 'Asia',
-		age: 38,
-		language: 'Python',
-	},
-	{
-		firstName: 'Laia',
-		lastName: 'P.',
-		country: 'Andorra',
-		continent: 'Europe',
-		age: 55,
-		language: 'Ruby',
-	},
-	{
-		firstName: 'Sofia',
-		lastName: 'P.',
-		country: 'Italy',
-		continent: 'Europe',
-		age: 71,
-		language: 'Clojure',
-	},
-	{
-		firstName: 'Nikau',
-		lastName: 'R.',
-		country: 'New Zealand',
-		continent: 'Oceania',
-		age: 39,
-		language: 'Ruby',
-	},
-	{
-		firstName: 'Yerasyl',
-		lastName: 'D.',
-		country: 'Kazakhstan',
-		continent: 'Asia',
-		age: 22,
-		language: 'Ruby',
-	},
-	{
-		firstName: 'Margret',
-		lastName: 'M.',
-		country: 'Iceland',
-		continent: 'Europe',
-		age: 28,
-		language: 'Java',
-	},
-];
+	const result = Object.values(staff).reduce(
+		(acc, currentScore) => acc + score[currentScore],
+		0
+	);
 
-const getAverageAge = (list) =>
-	Math.round(list.reduce((sum, obj) => sum + obj.age, 0) / list.length);
+	if (result <= 80) {
+		return 'kill me now';
+	}
 
-console.log(getAverageAge(list1));
-console.log(getAverageAge(list2));
-console.log(getAverageAge(list3));
+	if (result < 100) {
+		return 'i can handle this';
+	}
+
+	return 'party time!!';
+}
+
+console.log(
+	boredom({
+		tim: 'change',
+		jim: 'accounts',
+		randy: 'canteen',
+		sandy: 'change',
+		andy: 'change',
+		katie: 'IS',
+		laura: 'change',
+		saajid: 'IS',
+		alex: 'trading',
+		john: 'accounts',
+		mr: 'finance',
+	})
+);
+
+console.log(
+	boredom({
+		tim: 'IS',
+		jim: 'finance',
+		randy: 'pissing about',
+		sandy: 'cleaning',
+		andy: 'cleaning',
+		katie: 'cleaning',
+		laura: 'pissing about',
+		saajid: 'regulation',
+		alex: 'regulation',
+		john: 'accounts',
+		mr: 'canteen',
+	})
+);
+
+console.log(
+	boredom({
+		tim: 'accounts',
+		jim: 'accounts',
+		randy: 'pissing about',
+		sandy: 'finance',
+		andy: 'change',
+		katie: 'IS',
+		laura: 'IS',
+		saajid: 'canteen',
+		alex: 'pissing about',
+		john: 'retail',
+		mr: 'pissing about',
+	})
+);
