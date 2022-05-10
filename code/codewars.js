@@ -1,28 +1,25 @@
-const findMissingNumber = (sequence) => {
-	if (!sequence.length) {
-		return 0;
+const getIssuer = (number) => {
+	const str = String(number);
+
+	if (/^3[4|7]\d{13}$/.test(str)) {
+		return 'AMEX';
 	}
 
-	const arr = sequence
-		.split(' ')
-		.sort((a, b) => a - b)
-		.map(Number);
-
-	if (!arr.every((el) => !isNaN(el))) {
-		return 1;
+	if (/^6011\d{12}$/.test(str)) {
+		return 'Discover';
 	}
 
-	return arr.reduce((acc, el, index) => {
-		if (el != index + 1 && !acc) {
-			return (acc += index + 1);
-		}
-		return acc;
-	}, 0);
+	if (/^5[1-5]\d{14}$/.test(str)) {
+		return 'Mastercard';
+	}
+
+	if (/^4(\d{12}|\d{15})$/.test(str)) {
+		return 'VISA';
+	}
+
+	return 'Unknown';
 };
 
-console.log(findMissingNumber('2 6 4 5 3'));
-console.log(findMissingNumber('1 2 3 5'));
-console.log(findMissingNumber('2 6 1 5 3'));
-console.log(findMissingNumber('1 3'));
-console.log(findMissingNumber('1 5'));
-console.log(findMissingNumber('2 1 4 3 a'));
+console.log(getIssuer(4111111111111111));
+console.log(getIssuer(378282246310005));
+console.log(getIssuer(9111111111111111));
