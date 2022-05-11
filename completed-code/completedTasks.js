@@ -2254,3 +2254,8 @@
 // console.log(getIssuer(4111111111111111));
 // console.log(getIssuer(378282246310005));
 // console.log(getIssuer(9111111111111111));
+
+// const productArray = (numbers) =>
+// 	numbers.map((el) => numbers.reduce((a, b) => a * b) / el);
+
+// console.log(productArray([16, 17, 4, 3, 5, 2]));
