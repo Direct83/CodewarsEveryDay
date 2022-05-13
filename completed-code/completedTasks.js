@@ -2269,3 +2269,5 @@
 // }
 
 // console.log(newAvg([14, 30, 5, 7, 9, 11, 16], 90));
+
+// const circleOfNumbers = (n, firstNumber) =>(firstNumber + n/2) % n
