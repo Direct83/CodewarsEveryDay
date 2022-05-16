@@ -1,19 +1,20 @@
-const save = (sizes, hd) => {
-	if (!sizes.length) {
-		return 0;
-	}
+const tripleX = (str) => /^[^x]*xxx/.test(str);
 
-	return sizes.reduce(
-		(acc, el, index) => {
-			if ((acc.sum += el) <= hd) {
-				acc.count += 1;
-			}
-			return sizes.length - 1 === index ? acc.count : acc;
-		},
-		{ sum: 0, count: 0 }
-	);
-};
+// const tripleX = (str) =>
+// 	[...str].reduce(
+// 		(acc, el, index, arr) => {
+// 			if (el === 'x' && !acc.stop) {
+// 				acc.stop = true;
+// 				if (arr[index + 1] === 'x' && arr[index + 2] === 'x') {
+// 					acc.result = true;
+// 				}
+// 			}
 
-console.log(save([4, 4, 4, 1, 1], 11)); // 2
-console.log(save([4, 8, 15, 16, 23, 42], 108)); // 6
-console.log([], 69);
+// 			return arr.length - 1 === index ? acc.result : acc;
+// 		},
+// 		{ result: false, stop: false }
+// 	);
+
+console.log(tripleX('abraxxxas'));
+console.log(tripleX('softx kitty, warm kitty, xxxxx'));
+console.log(tripleX('kittyxxwarm'));
