@@ -2327,3 +2327,23 @@
 // console.log(tripleX('abraxxxas'));
 // console.log(tripleX('softx kitty, warm kitty, xxxxx'));
 // console.log(tripleX('kittyxxwarm'));
+
+// const tripleX = (str) =>
+// 	str.indexOf('x') === str.indexOf('xxx') && str.includes('x');
+
+// const product = s => 
+//   s.replace(/[^?]/g, '').length * s.replace(/[^!]/g, '').length;
+
+// const product = (string) =>
+// 	[...string].reduce(
+// 		(acc, el, index, arr) => {
+// 			if (el === '!' || el === '?') {
+// 				acc[el] += 1;
+// 			}
+// 			return arr.length - 1 === index ? acc['!'] * acc['?'] : acc;
+// 		},
+// 		string.length !== 0 ? { '!': 0, '?': 0 } : 0
+// 	);
+
+// console.log(product('!????!!!?'));
+// console.log(product(''));
