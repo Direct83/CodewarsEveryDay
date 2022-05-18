@@ -1,16 +1,18 @@
-// const product = (s) =>
-// 	s.replace(/[^?]/g, '').length * s.replace(/[^!]/g, '').length;
+function findSum(...args) {
+	if (args.map((el) => el < 0).includes(true)) {
+		return -1;
+	}
+	return args.reduce((acc, el) => acc + el, 0);
+}
 
-const product = (string) =>
-	[...string].reduce(
-		(acc, el, index, arr) => {
-			if (el === '!' || el === '?') {
-				acc[el] += 1;
-			}
-			return arr.length - 1 === index ? acc['!'] * acc['?'] : acc;
-		},
-		string.length !== 0 ? { '!': 0, '?': 0 } : 0
-	);
+console.log(findSum());
+console.log(findSum([1, 2]));
 
-console.log(product('!????!!!?'));
-console.log(product(''));
+const arrCoca = [
+	{ brand: 'nePepsi' },
+	{ brand: 'Pepsi' },
+	{ brand: 'nePepsi' },
+	{ brand: 'Pepsi' },
+];
+const brands = arrCoca.map((el) => el.brand);
+console.log(arrCoca.filter((_, index) => brands.indexOf('Pepsi') !== index));
