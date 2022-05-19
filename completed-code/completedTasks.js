@@ -2366,3 +2366,7 @@
 // ];
 // const brands = arrCoca.map((el) => el.brand);
 // console.log(arrCoca.filter((_, index) => brands.indexOf('Pepsi') !== index));
+
+// const solution = (value) => `Value is ${String(value).padStart(5, '0')}`;
+
+// console.log(solution(5));
