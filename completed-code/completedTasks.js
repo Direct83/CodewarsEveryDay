@@ -2370,3 +2370,9 @@
 // const solution = (value) => `Value is ${String(value).padStart(5, '0')}`;
 
 // console.log(solution(5));
+
+// const twoOldestAges = (ages) =>
+// 	ages
+// 		.sort((a, b) => b - a)
+// 		.slice(0, 2)
+// 		.reverse();
