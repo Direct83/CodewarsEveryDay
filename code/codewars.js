@@ -1,15 +1,6 @@
-const tidyNumber = (num) =>
-	[...String(num)]
-		.map(Number)
-		.every((el, index, arr) =>
-			el <= arr[index + 1] ? true : arr[index + 1] === undefined ? true : false
-		);
+const bingo = (a) =>
+	[2, 7, 9, 14, 15].every((el) => a.includes(el)) ? 'WIN' : 'LOSE';
 
-function stringMerge(string1, string2, letter) {
-	const wordOne = string1.slice(0, string1.indexOf(letter));
-	const wordTwo = string2.slice(string2.indexOf(letter));
-	return wordOne + wordTwo;
-}
-
-console.log(stringMerge('abcdefxxxyzz', 'abcxxxyyyxyzz', 'x'));
-console.log(stringMerge('apowiejfoiajsf', 'iwahfeijouh', 'j'));
+console.log(bingo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // LOSE
+console.log(bingo([21, 13, 2, 7, 5, 14, 7, 15, 9, 10])); // WIN
+console.log(bingo([23, 25, 9, 15, 4, 9, 13, 2, 6, 15])); // LOSE
