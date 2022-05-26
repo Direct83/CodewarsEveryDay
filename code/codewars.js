@@ -1,8 +1,6 @@
-const consecutive = (arr, a, b) =>
-	arr.some(
-		(el, index, arr) =>
-			(el === a && arr[index + 1] === b) || (el === b && arr[index + 1] === a)
-	);
+Array.prototype.remove_ = function (integer_list, values_list) {
+	return integer_list.filter((el) => !values_list.includes(el));
+};
 
-console.log(consecutive([1, 3, 5, 7], 3, 7)); // false
-console.log(consecutive([1, 3, 5, 7], 3, 1)); // true
+l = new Array();
+console.log(l.remove_([1, 1, 2, 3, 1, 2, 3, 4], [1, 3]));
