@@ -1,6 +1,7 @@
-Array.prototype.remove_ = function (integer_list, values_list) {
-	return integer_list.filter((el) => !values_list.includes(el));
-};
+const pattern = (n, acc = '') =>
+	[...Array(n > 0 ? n : 0)]
+		.map((_) => (acc = acc + n--))
+		.reverse()
+		.join(`\n`);
 
-l = new Array();
-console.log(l.remove_([1, 1, 2, 3, 1, 2, 3, 4], [1, 3]));
+console.log(pattern(5));
