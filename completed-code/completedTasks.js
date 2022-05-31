@@ -2436,3 +2436,12 @@
 // console.log(duplicates([1, 2, 2, 20, 6, 20, 2, 6, 2]));
 // console.log(duplicates([0, 0, 0, 0, 0, 0, 0]));
 // console.log(duplicates([1000, 1000]));
+
+// const solve = (a, b) =>
+// 	b.reduce((acc, el) => {
+// 		const count = a.filter((str) => el === str).length;
+// 		acc = acc.concat(count);
+// 		return acc;
+// 	}, []);
+
+// console.log(solve(['abc', 'abc', 'xyz', 'abcd', 'cde'], ['abc', 'cde', 'uap']));
