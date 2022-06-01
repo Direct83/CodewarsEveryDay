@@ -1,8 +1,5 @@
-const solve = (a, b) =>
-	b.reduce((acc, el) => {
-		const count = a.filter((str) => el === str).length;
-		acc = acc.concat(count);
-		return acc;
-	}, []);
+const filterLongWords = (sentence, n) =>
+	sentence.split(' ').filter((el) => el.length > n);
 
-console.log(solve(['abc', 'abc', 'xyz', 'abcd', 'cde'], ['abc', 'cde', 'uap']));
+console.log(filterLongWords('The quick brown fox jumps over the lazy dog', 4));
+// ['quick', 'brown', 'jumps']
