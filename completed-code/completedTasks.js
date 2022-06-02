@@ -2451,3 +2451,11 @@
 
 // console.log(filterLongWords('The quick brown fox jumps over the lazy dog', 4));
 // // ['quick', 'brown', 'jumps']
+
+// const makeBackronym = (string) =>
+// 	string
+// 		.split('')
+// 		.map((el) => dict[el.toUpperCase()])
+// 		.join(' ');
+
+// console.log(makeBackronym('dgm'));
