@@ -1,7 +1,7 @@
-const twoSum = (numbers, target) =>
-	numbers
-		.map((value, index, arr) => [index, arr.indexOf(target - value, index + 1)])
-		.filter((item) => item[1] > -1)[0];
+const isNice = (arr) =>
+	arr.length !== 0 &&
+	arr.every((el) => arr.includes(el + 1) || arr.includes(el - 1));
 
-console.log(twoSum([3, 2, 3], 6));
-console.log(twoSum([3, 2, 4], 6));
+console.log(isNice([2, 10, 9, 3]));
+console.log(isNice([3, 4, 5, 7]));
+console.log(isNice([-2, 5, 0, 5, 12]));
