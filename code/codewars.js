@@ -1,12 +1,7 @@
-function nextHappyYear(year) {
-	let result = 0;
-	for (let i = year + 1; ; i++) {
-		if ([...new Set(('' + i).split(''))].length === 4) {
-			result = i;
-			break;
-		}
-	}
-	return result;
+function bandNameGenerator(str) {
+	const isSame = str[0] === str[str.length - 1];
+	const upSlice = str[0].toUpperCase() + str.slice(1);
+	return isSame ? upSlice + str.slice(1) : 'The ' + upSlice;
 }
 
-console.log(nextHappyYear(1001));
+console.log(bandNameGenerator('knife'));
