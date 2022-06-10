@@ -1,7 +1,8 @@
-function bandNameGenerator(str) {
-	const isSame = str[0] === str[str.length - 1];
-	const upSlice = str[0].toUpperCase() + str.slice(1);
-	return isSame ? upSlice + str.slice(1) : 'The ' + upSlice;
-}
+const swap = (string) =>
+	[...string]
+		.map((el) => (/[aeiouy]/.test(el) ? el.toUpperCase() : el))
+		.join('');
 
-console.log(bandNameGenerator('knife'));
+const swap = (string) => string.replace(/[aeiou]/g, (el) => el.toUpperCase());
+
+console.log(swap('Hello World!'));
