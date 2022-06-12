@@ -2524,3 +2524,11 @@
 // const swap = (string) => string.replace(/[aeiou]/g, (el) => el.toUpperCase());
 
 // console.log(swap('Hello World!'));
+
+// const elevatorDistance = (array) =>
+// 	array.reduce(
+// 		(acc, el, index, array) => (acc += Math.abs(el - array[index + 1] || 0)),
+// 		0
+// 	);
+
+// console.log(elevatorDistance([5, 2, 8]));

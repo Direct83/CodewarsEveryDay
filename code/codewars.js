@@ -1,8 +1,7 @@
-const swap = (string) =>
-	[...string]
-		.map((el) => (/[aeiouy]/.test(el) ? el.toUpperCase() : el))
-		.join('');
+const elevatorDistance = (array) =>
+	array.reduce(
+		(acc, el, index, array) => (acc += Math.abs(el - array[index + 1] || 0)),
+		0
+	);
 
-const swap = (string) => string.replace(/[aeiou]/g, (el) => el.toUpperCase());
-
-console.log(swap('Hello World!'));
+console.log(elevatorDistance([5, 2, 8]));
