@@ -1,18 +1,10 @@
-const baggage = [
-	{ ticket: 1, baggage: ['a'] },
-	{ ticket: 2, baggage: ['b'] },
-	{ ticket: 3, baggage: ['c'] },
-];
-
-const passenger = [
-	{ name: 'Vasya', ticket: 1, baggage: [] },
-	{ name: 'Anya', ticket: 2, baggage: [] },
-	{ name: 'Valera', ticket: 3, baggage: [] },
-];
+const covfefe = (str) =>
+	str.includes('coverage')
+		? str.replace(/(coverage)/g, 'covfefe')
+		: str + ' covfefe';
 
 console.log(
-	passenger.map((passenger) => ({
-		...passenger,
-		baggage: baggage.find((el) => el.ticket === passenger.ticket).baggage,
-	}))
+	covfefe(
+		'1xhd 1gap 1yv8coveragefxgj e9hh9coverage6w032 klobcoverage68mlf rtss'
+	)
 );
