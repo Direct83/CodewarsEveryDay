@@ -1,43 +1,27 @@
-const isNonDecreasingOrder = (number) =>
-	String(number)
-		.split('')
-		.every((el, index, arr) =>
-			arr.length - 1 === index ? true : el <= arr[index + 1]
-		);
+const winnerList1 = [
+	{ season: '1996–97', team: 'Borussia Dortmund', country: 'Germany' },
+	{ season: '1997–98', team: 'Real Madrid', country: 'Spain' },
+	{ season: '1998–99', team: 'Manchester United', country: 'England' },
+	{ season: '1999–00', team: 'Real Madrid', country: 'Spain' },
+	{ season: '2000–01', team: 'Bayern Munich', country: 'Germany' },
+	{ season: '2001–02', team: 'Real Madrid', country: 'Spain' },
+	{ season: '2002–03', team: 'Milan', country: 'Italy' },
+	{ season: '2003–04', team: 'Porto', country: 'Portugal' },
+	{ season: '2004–05', team: 'Liverpool', country: 'England' },
+	{ season: '2005–06', team: 'Barcelona', country: 'Spain' },
+	{ season: '2006–07', team: 'Milan', country: 'Italy' },
+	{ season: '2007–08', team: 'Manchester United', country: 'England' },
+	{ season: '2008–09', team: 'Barcelona', country: 'Spain' },
+	{ season: '2009–10', team: 'Internazionale', country: 'Italy' },
+	{ season: '2010–11', team: 'Barcelona', country: 'Spain' },
+	{ season: '2011–12', team: 'Chelsea', country: 'England' },
+	{ season: '2012–13', team: 'Bayern', country: 'Germany' },
+	{ season: '2013–14', team: 'Real Madrid', country: 'Spain' },
+	{ season: '2014–15', team: 'Barcelona', country: 'Spain' },
+	{ season: '2015–16', team: 'Real Madrid', country: 'Spain' },
+];
 
-function sumDigits(number) {
-	let result = 0;
-	let digit;
+const countWins = (winnerList, country) =>
+	winnerList.filter((el) => el.country === country).length;
 
-	while (number) {
-		digit = number % 10;
-		result += digit;
-		number = (number - digit) / 10;
-	}
-
-	return result;
-}
-
-const findAll = (n, k) => {
-	const maxNumber = Number('9'.repeat(k)) + 1;
-	let results = [];
-	let count = Number('1' + '0'.repeat(k - 1));
-
-	while (count < maxNumber) {
-		if (sumDigits(count) === n && isNonDecreasingOrder(count)) {
-			results.push(count);
-		}
-		++count;
-	}
-
-	if (results.length === 0) {
-		return [0];
-	}
-
-	return [results.length, results[0], results[results.length - 1]];
-};
-
-console.log(findAll(10, 3)); // [8, 118, 334]
-console.log(findAll(27, 3)); // [1, 999, 999]
-console.log(findAll(28, 3)); // [0]
-console.log(findAll(10, 8));
+console.log(countWins(winnerList1, 'Portugal'));
