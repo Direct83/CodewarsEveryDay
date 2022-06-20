@@ -2689,3 +2689,8 @@
 // console.log(tail([1]), []);
 // console.log(init([1, 5, 7, 9]), [1, 5, 7]);
 // console.log(last([7, 2]), 2);
+
+// const twoDecimalPlaces = (number) => Number(String(number).match(/.*\.\d\d/));
+
+// console.log(twoDecimalPlaces(-7488.83585834983));
+// console.log(twoDecimalPlaces(10.1289767789));
