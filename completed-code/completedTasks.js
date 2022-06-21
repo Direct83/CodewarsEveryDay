@@ -2694,3 +2694,19 @@
 
 // console.log(twoDecimalPlaces(-7488.83585834983));
 // console.log(twoDecimalPlaces(10.1289767789));
+
+// let questions = [
+// 	{
+// 		question: "What's the currency of the USA?",
+// 		choices: ['US dollar', 'Ruble', 'Horses', 'Gold'],
+// 		corAnswer: 0,
+// 	},
+// 	{
+// 		question: 'Where was the American Declaration of Independence signed?',
+// 		choices: ['Philadelphia', 'At the bottom', "Frankie's Pub", 'China'],
+// 		corAnswer: 0,
+// 	},
+// ];
+// questions = questions.map((el) => ({ ...el, usersAnswer: null }));
+
+// console.log(questions[0]);
