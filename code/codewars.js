@@ -1,15 +1,6 @@
-let questions = [
-	{
-		question: "What's the currency of the USA?",
-		choices: ['US dollar', 'Ruble', 'Horses', 'Gold'],
-		corAnswer: 0,
-	},
-	{
-		question: 'Where was the American Declaration of Independence signed?',
-		choices: ['Philadelphia', 'At the bottom', "Frankie's Pub", 'China'],
-		corAnswer: 0,
-	},
-];
-questions = questions.map((el) => ({ ...el, usersAnswer: null }));
+function findScreenHeight(w, h) {
+	const [horizontal, vertical] = h.split(':');
+	return `${w}x${w * (vertical / horizontal)}`;
+}
 
-console.log(questions[0]);
+console.log(findScreenHeight(1024, '4:3'));
