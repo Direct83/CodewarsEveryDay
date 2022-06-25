@@ -1,16 +1,18 @@
-const arr = [2, 3, 1, 4, 5, 6, 7];
-function maxMinChange(arr) {
-	const max = Math.max(...arr);
-	const min = Math.min(...arr);
-	return arr.map((el, index, arr) => {
-		if (arr.lastIndexOf(max) === index) {
-			el = min;
-		}
-		if (arr.lastIndexOf(min) === index) {
-			el = max;
-		}
-		return el;
-	});
-}
+const check = (obj) => {
+	const message =
+		obj.even > obj.odd
+			? 'Even is greater than Odd'
+			: 'Odd is greater than Even';
+	return obj.even === obj.odd ? 'Even and Odd are the same' : message;
+};
+const evenOrOdd = (str) =>
+	[...str].reduce(
+		(acc, el, index, arr) => {
+			el % 2 === 0 ? (acc.even += Number(el)) : (acc.odd += Number(el));
+			return arr.length - 1 === index ? check(acc) : acc;
+		},
+		{ even: 0, odd: 0 }
+	);
 
-console.log(maxMinChange(arr));
+console.log(evenOrOdd('12'));
+console.log(evenOrOdd('112'));
