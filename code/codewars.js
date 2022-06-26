@@ -1,18 +1,8 @@
-const check = (obj) => {
-	const message =
-		obj.even > obj.odd
-			? 'Even is greater than Odd'
-			: 'Odd is greater than Even';
-	return obj.even === obj.odd ? 'Even and Odd are the same' : message;
-};
-const evenOrOdd = (str) =>
-	[...str].reduce(
-		(acc, el, index, arr) => {
-			el % 2 === 0 ? (acc.even += Number(el)) : (acc.odd += Number(el));
-			return arr.length - 1 === index ? check(acc) : acc;
-		},
-		{ even: 0, odd: 0 }
+const getMissingElement = (superImportantArray) =>
+	[...Array(10).keys()].find(
+		(_, index) => !superImportantArray.includes(index)
 	);
 
-console.log(evenOrOdd('12'));
-console.log(evenOrOdd('112'));
+console.log(getMissingElement([0, 5, 1, 3, 2, 9, 7, 6, 4]));
+console.log(getMissingElement([9, 2, 4, 5, 7, 0, 8, 6, 1]));
+console.log(getMissingElement([6, 1, 2, 4, 3, 5, 7, 8, 9]));
