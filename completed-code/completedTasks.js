@@ -2763,3 +2763,16 @@
 // console.log(getMissingElement([0, 5, 1, 3, 2, 9, 7, 6, 4]));
 // console.log(getMissingElement([9, 2, 4, 5, 7, 0, 8, 6, 1]));
 // console.log(getMissingElement([6, 1, 2, 4, 3, 5, 7, 8, 9]));
+
+// class Person {
+// 	constructor(name) {
+// 		this.name = name;
+// 	}
+// 	greet(name) {
+// 		return 'Hello ' + name + ', my name is ' + this.name;
+// 	}
+// }
+
+// var joe = new Person('Joe');
+// console.log(joe.greet('Kate')); // should return 'Hello Kate, my name is Joe'
+// joe.name;
