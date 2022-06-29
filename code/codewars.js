@@ -1,6 +1,3 @@
-const solution = (pairs) =>
-	Object.entries(pairs)
-		.map((el) => el.join(' = '))
-		.join(',');
+const fireFight = (s) => s.replace(/Fire/g, '~~');
 
-console.log(solution({ a: 1, b: '2' })); // a = 1,b = 2
+console.log(fireFight('Mast Deck Engine Water Fire'));

@@ -2783,3 +2783,7 @@
 // 		.join(',');
 
 // console.log(solution({ a: 1, b: '2' })); // a = 1,b = 2
+
+// const fireFight = (s) => s.replace(/Fire/g, '~~');
+
+// console.log(fireFight('Mast Deck Engine Water Fire'));
