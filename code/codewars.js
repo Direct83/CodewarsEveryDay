@@ -1,6 +1,9 @@
-const stantonMeasure = (arr) => {
-	const number = arr.filter((el) => el === 1).length;
-	return arr.filter((el) => el === number).length;
-};
-console.log(stantonMeasure([1, 4, 3, 2, 1, 2, 3, 2]));
-console.log(stantonMeasure([1, 4, 1, 2, 11, 2, 3, 1]));
+const flatten = (array) => array.reduce((acc, el) => acc.concat(el), []);
+
+console.log(
+	flatten([
+		[1, 2, 3],
+		['a', 'b', 'c'],
+		[1, 2, 3],
+	])
+);
