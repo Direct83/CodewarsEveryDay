@@ -1,14 +1,10 @@
-const extraPerfect = (n) =>
-	[...Array(Math.round(n / 2))].reduce(
-		(acc) => {
-			const lastNumber = acc[acc.length - 1];
-			if (lastNumber + 2 <= n) {
-				acc = acc.concat(lastNumber + 2);
-			}
-			return acc;
-		},
-		[1]
-	);
+const arr = [0, 1, 2, 2, 3];
 
-console.log(extraPerfect(3));
-console.log(extraPerfect(28));
+Array.prototype.numberOfOccurrences = function (number) {
+	return this.filter(el => el === number).length;
+};
+
+console.log(arr.numberOfOccurrences(0));
+console.log(arr.numberOfOccurrences(4));
+console.log(arr.numberOfOccurrences(2));
+console.log(arr.numberOfOccurrences('a'));
