@@ -1,10 +1,8 @@
-const arr = [0, 1, 2, 2, 3];
+const replaceNth = (text, n, oldValue, newValue, count = 0) =>
+	n > 0
+		? text.replace(new RegExp(oldValue, 'g'), (symbol) =>
+				++count % n === 0 ? newValue : symbol
+		  )
+		: text;
 
-Array.prototype.numberOfOccurrences = function (number) {
-	return this.filter(el => el === number).length;
-};
-
-console.log(arr.numberOfOccurrences(0));
-console.log(arr.numberOfOccurrences(4));
-console.log(arr.numberOfOccurrences(2));
-console.log(arr.numberOfOccurrences('a'));
+console.log(replaceNth('Vader said: No, I am your father!', 2, 'a', 'o')); // "Vader soid: No, I am your fother!"
