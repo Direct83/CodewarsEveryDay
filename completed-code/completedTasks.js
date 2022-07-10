@@ -2912,3 +2912,5 @@
 // 	);
 
 // console.log(findAdmin(arr, 'JavaScript'));
+
+// const getNames = (data) => data.map((item) => item.name);
