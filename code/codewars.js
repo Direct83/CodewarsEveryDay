@@ -1,6 +1,11 @@
-function liftoff(instructions) {
-	const result = instructions.sort((a, b) => b - a).join(' ');
-	return `${result} liftoff!`;
-}
+const nicknameGenerator = (name) =>
+	(name.length <= 3 && 'Error: Name too short') ||
+	(/[aeiou]/.test(name[2]) ? name.slice(0, 4) : name.slice(0, 3));
 
-console.log(liftoff([2, 8, 10, 9, 1, 3, 4, 7, 6, 5]));
+console.log(nicknameGenerator('Robert')); //=> "Rob"
+console.log(nicknameGenerator('Kimberly')); //=> "Kim"
+console.log(nicknameGenerator('Samantha')); //=> "Sam"
+console.log(nicknameGenerator('Jeannie')); //=> "Jean"
+console.log(nicknameGenerator('Douglas')); //=> "Doug"
+console.log(nicknameGenerator('Gregory')); //=> "Greg"
+console.log(nicknameGenerator('Sam'));
