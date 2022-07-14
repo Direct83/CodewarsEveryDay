@@ -1,11 +1,39 @@
-const nicknameGenerator = (name) =>
-	(name.length <= 3 && 'Error: Name too short') ||
-	(/[aeiou]/.test(name[2]) ? name.slice(0, 4) : name.slice(0, 3));
+const friends = [
+	{
+		username: 'David',
+		status: 'online',
+		lastActivity: 10,
+	},
+	{
+		username: 'Lucy',
+		status: 'offline',
+		lastActivity: 22,
+	},
+	{
+		username: 'Bob',
+		status: 'online',
+		lastActivity: 104,
+	},
+];
 
-console.log(nicknameGenerator('Robert')); //=> "Rob"
-console.log(nicknameGenerator('Kimberly')); //=> "Kim"
-console.log(nicknameGenerator('Samantha')); //=> "Sam"
-console.log(nicknameGenerator('Jeannie')); //=> "Jean"
-console.log(nicknameGenerator('Douglas')); //=> "Doug"
-console.log(nicknameGenerator('Gregory')); //=> "Greg"
-console.log(nicknameGenerator('Sam'));
+const friends2 = [
+	{ username: 'Lucy', status: 'offline', lastActivity: 22 },
+	{ username: 'Bob', status: 'online', lastActivity: 104 },
+];
+
+const whosOnline = (friends) =>
+	friends.reduce((acc, el) => {
+		const { status, lastActivity, username } = el;
+		const { online, offline, away } = acc;
+		if (status !== 'online') {
+			offline ? offline.push(username) : (acc.offline = [username]);
+		} else if (lastActivity > 10) {
+			away ? away.push(username) : (acc.away = [username]);
+		} else {
+			online ? online.push(username) : (acc.online = [username]);
+		}
+		return acc;
+	}, {});
+
+console.log(whosOnline(friends));
+console.log(whosOnline(friends2));
