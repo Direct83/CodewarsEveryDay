@@ -1,43 +1,11 @@
-var list1 = [
-	{
-		firstName: 'Noah',
-		lastName: 'M.',
-		country: 'Switzerland',
-		continent: 'Europe',
-		age: 19,
-		language: 'C',
-		meal: 'vegetarian',
-	},
-	{
-		firstName: 'Anna',
-		lastName: 'R.',
-		country: 'Liechtenstein',
-		continent: 'Europe',
-		age: 52,
-		language: 'JavaScript',
-		meal: 'standard',
-	},
-	{
-		firstName: 'Ramona',
-		lastName: 'R.',
-		country: 'Paraguay',
-		continent: 'Americas',
-		age: 29,
-		language: 'Ruby',
-		meal: 'vegan',
-	},
-	{
-		firstName: 'George',
-		lastName: 'B.',
-		country: 'England',
-		continent: 'Europe',
-		age: 81,
-		language: 'C',
-		meal: 'vegetarian',
-	},
-];
+function product(values) {
+	if (values === null || !values.length) {
+		return null;
+	}
 
-const orderFood = (list) =>
-	list.reduce((acc, { meal }) => (acc[meal] = ++acc[meal] || 1) && acc, {});
+	return values.reduce((acc, el) => acc * el, 1);
+}
 
-console.log(orderFood(list1));
+console.log(product([5, 4, 1, 3, 9]));
+console.log(product([]));
+console.log(product(null));
