@@ -1,11 +1,5 @@
-function infected(s) {
-	const total = s.replace(/X/g, '').length;
-	const infected = s
-		.split('X')
-		.filter((i) => i.includes(1))
-		.join('').length;
-	const percentage = (100 * infected) / total;
-	return percentage || 0;
-}
+const isLucky = (n) =>
+	[...String(n)].reduce((acc, el) => acc + Number(el), 0) % 9 === 0;
 
-console.log(infected('01000000X000X011X0X'));
+console.log(isLucky(1892376));
+console.log(isLucky(0));
