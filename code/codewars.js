@@ -1,5 +1,5 @@
-const isLucky = (n) =>
-	[...String(n)].reduce((acc, el) => acc + Number(el), 0) % 9 === 0;
-
-console.log(isLucky(1892376));
-console.log(isLucky(0));
+function spoonerize(words) {
+	const [one, two] = words.split(' ');
+	return `${two[0] + one.slice(1)} ${one[0] + two.slice(1)}`;
+}
+console.log(spoonerize('nit picking'));
