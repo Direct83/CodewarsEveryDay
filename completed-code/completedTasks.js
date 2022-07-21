@@ -3060,3 +3060,16 @@
 
 // console.log(isLucky(1892376));
 // console.log(isLucky(0));
+
+// function spoonerize(words) {
+// 	const [one, two] = words.split(' ');
+// 	return `${two[0] + one.slice(1)} ${one[0] + two.slice(1)}`;
+// }
+// console.log(spoonerize('nit picking'));
+
+// const getAges = (sum, difference) =>
+// 	sum < 0 || difference < 0 || sum < difference
+// 		? null
+// 		: [(sum + difference) / 2, (sum - difference) / 2];
+
+// console.log(getAges(24, 4));
