@@ -3133,3 +3133,19 @@
 // 	return `${shorter}${[...longer].reverse().join('')}${shorter}`;
 // }
 // console.log(shorter_reverse_longer('first', 'abcde'));
+
+// const killer = (suspectInfo, dead) =>
+// 	Object.entries(suspectInfo).find(
+// 		(el) => el[1].filter((el) => dead.includes(el)).length === dead.length
+// 	)[0];
+
+// console.log(
+// 	killer(
+// 		{
+// 			James: ['Jacob', 'Bill', 'Lucas'],
+// 			Johnny: ['David', 'Kyle', 'Lucas'],
+// 			Peter: ['Lucy', 'Kyle'],
+// 		},
+// 		['Lucas', 'Bill']
+// 	)
+// );
