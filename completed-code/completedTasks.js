@@ -3270,3 +3270,12 @@
 // console.log(createDict(['a', 'b', 'c'], [1, 2, 3, 4]));
 // console.log(createDict(['a', 'b', 'c', 'd'], [1, 2, 3]));
 // console.log(createDict(['a', 'b', 'c', 'd', 'e'], [1, 2, 0, false, '']));
+
+// const change = (str) =>
+// 	'abcdefghijklmnopqrstuvwxyz'
+// 		.split('')
+// 		.map((el) => (str.toLowerCase().includes(el) ? 1 : 0))
+// 		.join('');
+
+// console.log(change('a **&  bZ'));
+// console.log(change('!!a$%&RgTT')); // '10000010000000000101000000'
