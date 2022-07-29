@@ -3279,3 +3279,6 @@
 
 // console.log(change('a **&  bZ'));
 // console.log(change('!!a$%&RgTT')); // '10000010000000000101000000'
+
+// const prevMultOfThree = (n) =>
+// 	n % 3 ? prevMultOfThree((n / 10) ^ 0) : n || null;
