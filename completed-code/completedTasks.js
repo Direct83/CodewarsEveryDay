@@ -3282,3 +3282,12 @@
 
 // const prevMultOfThree = (n) =>
 // 	n % 3 ? prevMultOfThree((n / 10) ^ 0) : n || null;
+
+// function flyBy(lamps, drone) {
+// 	if (drone.length > lamps.length) {
+// 		return 'o'.repeat(lamps.length);
+// 	}
+// 	return 'o'.repeat(drone.length) + 'x'.repeat(lamps.length - drone.length);
+// }
+
+// console.log(flyBy('xxxxxx', '====T')); // ooooox
