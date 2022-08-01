@@ -1,8 +1,3 @@
-function flyBy(lamps, drone) {
-	if (drone.length > lamps.length) {
-		return 'o'.repeat(lamps.length);
-	}
-	return 'o'.repeat(drone.length) + 'x'.repeat(lamps.length - drone.length);
-}
+const broken = (x) => x.replace(/./g, (x) => (x === '0' ? '1' : '0'));
 
-console.log(flyBy('xxxxxx', '====T')); // ooooox
+console.log(broken('10000000101101111110011001000'));
