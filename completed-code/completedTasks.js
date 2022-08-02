@@ -3295,3 +3295,8 @@
 // const broken = (x) => x.replace(/./g, (x) => (x === '0' ? '1' : '0'));
 
 // console.log(broken('10000000101101111110011001000'));
+
+// const filterEvenLengthWords = (words) =>
+// 	words.filter((el) => el.length % 2 === 0).length;
+
+// console.log(filterEvenLengthWords(['One', 'Two', 'Three', 'Four']));
