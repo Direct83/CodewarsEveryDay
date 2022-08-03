@@ -1,4 +1,9 @@
-const filterEvenLengthWords = (words) =>
-	words.filter((el) => el.length % 2 === 0).length;
+function freqSeq(str, sep) {
+	const count = [...str].reduce(
+		(acc, el) => (acc[el] = ++acc[el] || 1) && acc,
+		{}
+	);
+	return [...str.replace(/./g, (x) => count[x])].join(sep);
+}
 
-console.log(filterEvenLengthWords(['One', 'Two', 'Three', 'Four']));
+console.log(freqSeq('hello world', '-'));
