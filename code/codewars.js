@@ -1,9 +1,18 @@
-function freqSeq(str, sep) {
-	const count = [...str].reduce(
-		(acc, el) => (acc[el] = ++acc[el] || 1) && acc,
-		{}
+function battle(x, y) {
+	const oneWordScore = [...x].reduce(
+		(acc, el) => acc + el.charCodeAt() - 64,
+		0
 	);
-	return [...str.replace(/./g, (x) => count[x])].join(sep);
+	const twoWordScore = [...y].reduce(
+		(acc, el) => acc + el.charCodeAt() - 64,
+		0
+	);
+	if (oneWordScore === twoWordScore) {
+		return 'Tie!';
+	}
+	return oneWordScore > twoWordScore ? x : y;
 }
 
-console.log(freqSeq('hello world', '-'));
+console.log(battle('ONE', 'TWO'));
+console.log(battle('AAA', 'Z'));
+console.log(battle('I', 'BX')); // bx

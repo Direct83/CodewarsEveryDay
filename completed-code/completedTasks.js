@@ -3310,3 +3310,18 @@
 // }
 
 // console.log(freqSeq('hello world', '-'));
+
+// function battle(x, y) {
+// 	const oneWordScore = [...x].reduce(
+// 		(acc, el) => acc + el.charCodeAt() - 64,
+// 		0
+// 	);
+// 	const twoWordScore = [...y].reduce(
+// 		(acc, el) => acc + el.charCodeAt() - 64,
+// 		0
+// 	);
+// 	if (oneWordScore === twoWordScore) {
+// 		return 'Tie!';
+// 	}
+// 	return oneWordScore > twoWordScore ? x : y;
+// }
