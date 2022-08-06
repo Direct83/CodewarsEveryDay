@@ -1,18 +1,9 @@
-function battle(x, y) {
-	const oneWordScore = [...x].reduce(
-		(acc, el) => acc + el.charCodeAt() - 64,
-		0
-	);
-	const twoWordScore = [...y].reduce(
-		(acc, el) => acc + el.charCodeAt() - 64,
-		0
-	);
-	if (oneWordScore === twoWordScore) {
-		return 'Tie!';
-	}
-	return oneWordScore > twoWordScore ? x : y;
-}
+const gordon = (a) =>
+	a
+		.toUpperCase()
+		.replace(/\w+/g, '$&!!!!')
+		.replace(/[AEIOU]/g, (v) => (v == 'A' ? '@' : '*'));
 
-console.log(battle('ONE', 'TWO'));
-console.log(battle('AAA', 'Z'));
-console.log(battle('I', 'BX')); // bx
+console.log(gordon('What feck damn cake'));
+console.log(gordon('are you stu pid'));
+console.log(gordon('i am a chef'));
