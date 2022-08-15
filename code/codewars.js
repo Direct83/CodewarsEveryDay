@@ -1,11 +1,13 @@
-const moveTen = (s) =>
-	[...s.toLowerCase()]
-		.map((symbol) => {
-			const code = symbol.charCodeAt();
-			return String.fromCharCode(
-				code + 10 <= 122 ? code + 10 : 97 + code + 9 - 122
-			);
-		})
-		.join('');
+function fusc(n) {
+	if (n == 0 || n == 1) {
+		return n;
+	}
 
-console.log(moveTen('testcase'));
+	if (n % 2 == 0) {
+		return fusc(n / 2);
+	}
+
+	return fusc((n - 1) / 2) + fusc((n + 1) / 2);
+}
+
+console.log(fusc(85));
