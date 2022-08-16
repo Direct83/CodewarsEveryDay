@@ -1,13 +1,4 @@
-function fusc(n) {
-	if (n == 0 || n == 1) {
-		return n;
-	}
+const arithmeticSequenceSum = (a, r, n) =>
+	[...Array(n)].reduce((acc, _, index) => (acc += a + r * index), 0);
 
-	if (n % 2 == 0) {
-		return fusc(n / 2);
-	}
-
-	return fusc((n - 1) / 2) + fusc((n + 1) / 2);
-}
-
-console.log(fusc(85));
+console.log(arithmeticSequenceSum(2, 3, 5));
