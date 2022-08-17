@@ -1,4 +1,3 @@
-const arithmeticSequenceSum = (a, r, n) =>
-	[...Array(n)].reduce((acc, _, index) => (acc += a + r * index), 0);
+const unscrambleEggs = (word) => word.replace(/egg/g, '');
 
-console.log(arithmeticSequenceSum(2, 3, 5));
+console.log(unscrambleEggs('ceggodegge heggeregge'));
