@@ -3425,3 +3425,17 @@
 // const collatz = (n) => (n > 1 ? 1 + collatz(n % 2 ? n * 3 + 1 : n / 2) : 1);
 
 // console.log(collatz(20));
+
+// const solve = (s) =>
+// 	[...s]
+// 		.sort()
+// 		.every((el, index, arr) =>
+// 			arr.length - 1 !== index
+// 				? el.charCodeAt() + 1 === arr[index + 1].charCodeAt()
+// 				: true
+// 		);
+
+// console.log(solve('abc'));
+// console.log(solve('abd'));
+// console.log(solve('dabc'));
+// console.log(solve('abbc'));
