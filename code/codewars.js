@@ -1,13 +1,10 @@
-const solve = (s) =>
-	[...s]
-		.sort()
-		.every((el, index, arr) =>
-			arr.length - 1 !== index
-				? el.charCodeAt() + 1 === arr[index + 1].charCodeAt()
-				: true
-		);
+const pattern = (n) =>
+	[...Array(n)].reduce((acc, _, index, arr) => {
+		acc += `${1}${'*'.repeat(String(index))}${
+			index + 1 === 1 ? '' : index + 1
+		}${arr.length - 1 === index ? '' : '\n'}`;
+		return acc;
+	}, '');
 
-console.log(solve('abc'));
-console.log(solve('abd'));
-console.log(solve('dabc'));
-console.log(solve('abbc'));
+console.log(pattern(3));
+console.log(pattern(4));
