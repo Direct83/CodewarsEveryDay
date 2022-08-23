@@ -1,10 +1,5 @@
-const pattern = (n) =>
-	[...Array(n)].reduce((acc, _, index, arr) => {
-		acc += `${1}${'*'.repeat(String(index))}${
-			index + 1 === 1 ? '' : index + 1
-		}${arr.length - 1 === index ? '' : '\n'}`;
-		return acc;
-	}, '');
+const scrollingText = (text) =>
+	(text = text.toUpperCase()) &&
+	[...text].map((_, i) => text.slice(i) + text.slice(0, i));
 
-console.log(pattern(3));
-console.log(pattern(4));
+console.log(scrollingText('abc'));
