@@ -3450,3 +3450,7 @@
 
 // console.log(pattern(3));
 // console.log(pattern(4));
+
+// const sum = (...args) => args.reduce((acc, el) => acc + el, 0);
+
+// console.log(sum(12, 1, 1, 1, 1, 1, 1));

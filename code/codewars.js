@@ -1,5 +1,3 @@
-const scrollingText = (text) =>
-	(text = text.toUpperCase()) &&
-	[...text].map((_, i) => text.slice(i) + text.slice(0, i));
+const sum = (...args) => args.reduce((acc, el) => acc + el, 0);
 
-console.log(scrollingText('abc'));
+console.log(sum(12, 1, 1, 1, 1, 1, 1));
