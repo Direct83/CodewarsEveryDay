@@ -3454,3 +3454,11 @@
 // const sum = (...args) => args.reduce((acc, el) => acc + el, 0);
 
 // console.log(sum(12, 1, 1, 1, 1, 1, 1));
+
+// const remove = (string) =>
+// 	string
+// 		.split(' ')
+// 		.map((el) => el.replace(/!*$/g, ''))
+// 		.join(' ');
+
+// console.log(remove('!!!Hi !!hi!!! !hi'));
