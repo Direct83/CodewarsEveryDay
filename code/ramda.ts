@@ -48,6 +48,7 @@ import {
 	values,
 	ifElse,
 	gte,
+	includes,
 } from 'ramda';
 
 // const longestWord = pipe(split` `, sort(ascend(length)), last);
