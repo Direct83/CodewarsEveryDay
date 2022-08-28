@@ -12,23 +12,13 @@
 		</style>
 	</head>
 	<body>
-		<form id="formElement">
-			One: <input type="text" /><br /><br />
-			Two: <input type="text" />
-		</form>
+		<div href="#" onmouseup="get_selected_text()">аааааааааааааааааааааа</div>
 
 		<script type="text/javascript">
-			const formElement = document.forms['formElement'];
-			const arrayElements = formElement.elements;
-
-			for (let i = 0; i < arrayElements.length; i++) {
-				formElement[i].onfocus = (event) =>
-					event.target.classList.add('focused');
-			}
-
-			for (let i = 0; i < arrayElements.length; i++) {
-				formElement[i].onblur = (event) =>
-					event.target.classList.remove('focused');
+			function get_selected_text() {
+				const selectedInfo = window.getSelection();
+				console.log('start', selectedInfo.baseOffset);
+				console.log('end', selectedInfo.extentOffset - 1);
 			}
 		</script>
 	</body>
