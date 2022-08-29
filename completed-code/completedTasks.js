@@ -3481,3 +3481,8 @@
 // }
 
 // console.log(splitTheBill({ A: 20, B: 15, C: 10 }));
+
+// const findDup = (arr) =>
+// 	arr.filter((el, index) => arr.indexOf(el) !== index)[0];
+
+// console.log(findDup([1, 3, 2, 5, 4, 5, 7, 6]));
