@@ -1,7 +1,15 @@
-const multiples = (s1, s2, s3) =>
-	[...Array(s3 - s1)]
-		.map((_, index) => index + s1)
-		.filter((el) => !(el % s1 || el % s2));
+const fizzBuzzCuckooClock = (time) =>
+	(([hour, minute]) =>
+		!minute
+			? `Cuckoo `.repeat(hour % 12 || 12).trim()
+			: !(minute % 30)
+			? `Cuckoo`
+			: !(minute % 15)
+			? `Fizz Buzz`
+			: !(minute % 5)
+			? `Buzz`
+			: !(minute % 3)
+			? `Fizz`
+			: `tick`)(time.split(`:`).map(Number));
 
-console.log(multiples(13, 5, 800));
-// [65, 130, 195, 260, 325, 390, 455, 520, 585, 650, 715, 780]
+console.log(fizzBuzzCuckooClock('13:34'));
