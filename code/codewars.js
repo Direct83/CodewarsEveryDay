@@ -1,15 +1,4 @@
-const fizzBuzzCuckooClock = (time) =>
-	(([hour, minute]) =>
-		!minute
-			? `Cuckoo `.repeat(hour % 12 || 12).trim()
-			: !(minute % 30)
-			? `Cuckoo`
-			: !(minute % 15)
-			? `Fizz Buzz`
-			: !(minute % 5)
-			? `Buzz`
-			: !(minute % 3)
-			? `Fizz`
-			: `tick`)(time.split(`:`).map(Number));
+const factorial = (n) => (n < 0 ? null : n === 0 ? 1 : n * factorial(n - 1));
 
-console.log(fizzBuzzCuckooClock('13:34'));
+console.log(factorial(5));
+console.log(factorial(-1));

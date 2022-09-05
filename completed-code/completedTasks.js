@@ -3523,3 +3523,8 @@
 // 			: `tick`)(time.split(`:`).map(Number));
 
 // console.log(fizzBuzzCuckooClock('13:34'));
+
+// const factorial = (n) => (n < 0 ? null : n === 0 ? 1 : n * factorial(n - 1));
+
+// console.log(factorial(5));
+// console.log(factorial(-1));
