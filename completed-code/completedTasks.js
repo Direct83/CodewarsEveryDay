@@ -3528,3 +3528,9 @@
 
 // console.log(factorial(5));
 // console.log(factorial(-1));
+
+// const howManyTimes = (annualPrice, individualPrice) =>
+// 	Math.ceil(annualPrice / individualPrice);
+
+// console.log(howManyTimes(40, 15));
+// console.log(howManyTimes(80, 15));

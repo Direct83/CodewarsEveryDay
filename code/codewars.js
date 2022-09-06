@@ -1,4 +1,5 @@
-const factorial = (n) => (n < 0 ? null : n === 0 ? 1 : n * factorial(n - 1));
+const howManyTimes = (annualPrice, individualPrice) =>
+	Math.ceil(annualPrice / individualPrice);
 
-console.log(factorial(5));
-console.log(factorial(-1));
+console.log(howManyTimes(40, 15));
+console.log(howManyTimes(80, 15));

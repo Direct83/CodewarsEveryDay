@@ -6,20 +6,39 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<style type="text/css">
-			.focused {
-				outline: solid 2px red;
+			.folder {
+				margin-left: 120px;
+			}
+			.line {
+				margin-left: -125px;
+			}
+			.innerLine {
+				height: 100px;
+				width: 100px;
+				margin-left: 20px;
+				border-left: 2px dotted #b38b0d;
+				border-bottom: 2px dotted #b38b0d;
+			}
+			.text {
+				position: relative;
+				bottom: 10px;
 			}
 		</style>
 	</head>
 	<body>
-		<div href="#" onmouseup="get_selected_text()">аааааааааааааааааааааа</div>
+		<div>Папка</div>
 
-		<script type="text/javascript">
-			function get_selected_text() {
-				const selectedInfo = window.getSelection();
-				console.log('start', selectedInfo.baseOffset);
-				console.log('end', selectedInfo.extentOffset - 1);
-			}
-		</script>
+		<div class="folder">
+			<div class="line">
+				<div class="innerLine"></div>
+			</div>
+			<div class="text">Вложенная папка</div>
+			<div class="line">
+				<div class="innerLine"></div>
+			</div>
+			<div class="text">Вложенная папка</div>
+		</div>
+
+		<script type="text/javascript"></script>
 	</body>
 </html>
