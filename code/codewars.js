@@ -1,6 +1,5 @@
-const makeValley = (arr) => [
-	...arr.sort((a, b) => b - a).filter((_, index) => !(index % 2)),
-	...arr.filter((_, index) => index % 2).reverse(),
-];
+const consecutive = (arr) =>
+	(Math.max(...arr) - Math.min(...arr) - arr.length + 1) | 0;
 
-console.log(makeValley([17, 17, 15, 14, 8, 7, 7, 5, 4, 4, 1]));
+console.log(consecutive([4, 8, 6]));
+console.log(consecutive([1, 2, 3, 4]));
