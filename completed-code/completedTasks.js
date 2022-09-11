@@ -3554,3 +3554,14 @@
 
 // console.log(consecutive([4, 8, 6]));
 // console.log(consecutive([1, 2, 3, 4]));
+
+// const peak = (arr) =>
+// 	arr.reduce((acc, _, index, arr) => {
+// 		const condition =
+// 			arr.slice(index + 1).reduce((a, b) => a + b, 0) ===
+// 			arr.slice(0, index).reduce((a, b) => a + b, 0);
+// 		if (condition && acc === -1) {
+// 			acc = index;
+// 		}
+// 		return acc;
+// 	}, -1);
