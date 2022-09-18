@@ -1,15 +1,3 @@
-function dotCalculator(equation) {
-	const [first, sign, second] = equation.split(' ');
-	switch (sign) {
-		case '+':
-			return '.'.repeat(first.length + second.length);
-		case '-':
-			return '.'.repeat(first.length - second.length);
-		case '*':
-			return '.'.repeat(first.length * second.length);
-		default:
-			return '.'.repeat(first.length / second.length);
-	}
-}
+const largestPower = (n) => (--n ? (Math.log(n) / Math.log(3)) ^ 0 : -1);
 
-console.log(dotCalculator('..... // ..'));
+console.log(largestPower(82));
