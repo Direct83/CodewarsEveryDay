@@ -3591,3 +3591,14 @@
 // const largestPower = (n) => (--n ? (Math.log(n) / Math.log(3)) ^ 0 : -1);
 
 // console.log(largestPower(82));
+
+// const digits = (num) =>
+// 	[...String(num)].reduce(
+// 		(acc, number, index, arr) => [
+// 			...acc,
+// 			...arr.slice(++index).map((el) => Number(number) + Number(el)),
+// 		],
+// 		[]
+// 	);
+
+// console.log(digits(156));
