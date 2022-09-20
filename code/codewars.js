@@ -1,10 +1,4 @@
-const digits = (num) =>
-	[...String(num)].reduce(
-		(acc, number, index, arr) => [
-			...acc,
-			...arr.slice(++index).map((el) => Number(number) + Number(el)),
-		],
-		[]
-	);
+const nthChar = (words) =>
+	words.reduce((acc, word, index) => acc + word[index], '');
 
-console.log(digits(156));
+console.log(nthChar(['yoda', 'best', 'has']));
