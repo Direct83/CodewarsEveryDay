@@ -1,4 +1,13 @@
-const nthChar = (words) =>
-	words.reduce((acc, word, index) => acc + word[index], '');
+const reverse = (number, acc = 0) => {
+	if (!number) {
+		return acc;
+	}
 
-console.log(nthChar(['yoda', 'best', 'has']));
+	acc = acc * 10 + (number % 10);
+
+	return reverse(Math.floor(number / 10), acc);
+};
+
+console.log(reverse(123));
+
+const chain = (input, fs) => fs.reduce((acc, el) => el(acc), input);
