@@ -3621,3 +3621,16 @@
 // console.log(reverse(123));
 
 // const chain = (input, fs) => fs.reduce((acc, el) => el(acc), input);
+
+// const capital = (capitals) =>
+// 	capitals.map(
+// 		({ country, state, capital }) =>
+// 			`The capital of ${country || state} is ${capital}`
+// 	);
+
+// console.log(
+// 	capital([
+// 		{ state: 'Maine', capital: 'Augusta' },
+// 		{ country: 'Spain', capital: 'Madrid' },
+// 	])
+// );
