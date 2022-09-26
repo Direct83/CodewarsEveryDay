@@ -1,13 +1,4 @@
-const reverse = (number, acc = 0) => {
-	if (!number) {
-		return acc;
-	}
+const range = (startNum, endNum) =>
+	[...Array(endNum - 1 - startNum)].map((_, index) => index + 1 + startNum);
 
-	acc = acc * 10 + (number % 10);
-
-	return reverse(Math.floor(number / 10), acc);
-};
-
-console.log(reverse(123));
-
-const chain = (input, fs) => fs.reduce((acc, el) => el(acc), input);
+console.log(range(2, 9));
