@@ -3648,3 +3648,7 @@
 // 		.replace(/s/gi, `5`);
 
 // console.log(makePassword('Give me liberty or give me death'));
+
+// const sortme = (names) => names.sort();
+
+// console.log(sortme(['one', 'two', 'three']));
