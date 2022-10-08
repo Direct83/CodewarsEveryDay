@@ -3665,3 +3665,9 @@
 // console.log(calcType(10, 5, 5));
 
 // const quotable = (name, quote) => `${name} said: "${quote}"`;
+
+// const multi = (arr) => arr.reduce((acc, el) => acc * el, 1);
+
+// const add = (arr) => arr.reduce((acc, el) => acc + el, 0);
+
+// const reverse = (str) => [...str].reverse().join(``);
