@@ -1,5 +1,6 @@
-const multi = (arr) => arr.reduce((acc, el) => acc * el, 1);
+const listToArray = (list) =>
+	list ? [list.value, ...listToArray(list.next)] : [];
 
-const add = (arr) => arr.reduce((acc, el) => acc + el, 0);
-
-const reverse = (str) => [...str].reverse().join(``);
+console.log(
+	listToArray({ value: 1, next: { value: 2, next: { value: 3, next: null } } })
+);
