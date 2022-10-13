@@ -3678,3 +3678,5 @@
 // console.log(
 // 	listToArray({ value: 1, next: { value: 2, next: { value: 3, next: null } } })
 // );
+
+// const arrCheck = (value) => value.every(Array.isArray);
