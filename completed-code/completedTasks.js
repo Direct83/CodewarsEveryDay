@@ -3683,3 +3683,13 @@
 
 // const isFlush = (cards) =>
 // 	cards.every((card) => cards[0].slice(-1) === card.slice(-1));
+
+// const numberJoy = (n) => {
+// 	const sumNumbers = [...String(n)].reduce((a, b) => a + Number(b), 0);
+// 	const result =
+// 		sumNumbers * Number([...String(sumNumbers)].reverse().join(''));
+// 	return result === n;
+// }
+
+// console.log(numberJoy(1997));
+// console.log(numberJoy(1458));
